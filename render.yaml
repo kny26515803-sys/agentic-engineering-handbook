@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: agentic-engineering-handbook
+    env: static
+    buildCommand: pip install -r requirements.txt && python scripts/build_docs.py && mkdocs build
+    staticPublishPath: ./site

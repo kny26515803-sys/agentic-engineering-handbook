@@ -5,7 +5,10 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Last Updated](https://img.shields.io/badge/Last%20Updated-2026--07--25-blue.svg)](#)
 
+👉 **[🌐 한글 라이브 웹사이트 바로가기](https://kny26515803-sys.github.io/agentic-engineering-handbook/)** | **[📄 한글 전자책 PDF 다운로드](Agentic_Engineering_Handbook_KR.pdf)**
+
 ---
+
 
 ## 💡 핸드북 소개 (Why This Repository?)
 

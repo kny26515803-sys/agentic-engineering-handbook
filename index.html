@@ -1,0 +1,4176 @@
+
+<!doctype html>
+<html lang="ko" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="The definitive OpenAI, Anthropic, Google, MCP, Harness, Evals, and Production Agent Systems learning roadmap.">
+      
+      
+        <meta name="author" content="keyuchen21">
+      
+      
+      
+      
+        <link rel="next" href="ARCHITECTURE/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Agentic Engineering Handbook</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="css/print-site.css">
+    
+      <link rel="stylesheet" href="css/print-site-material.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#agentic-engineering-handbook" class="md-skip">
+          콘텐츠로 이동
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="상단/헤더">
+    <a href="." title="Agentic Engineering Handbook" class="md-header__button md-logo" aria-label="Agentic Engineering Handbook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Agentic Engineering Handbook
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              📖 핸드북 메인 로드맵
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="검색" placeholder="검색" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="검색">
+        
+        <button type="reset" class="md-search__icon md-icon" title="지우기" aria-label="지우기" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            검색 초기화
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="탭" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="." class="md-tabs__link">
+        
+  
+  
+    
+  
+  📖 핸드북 메인 로드맵
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="ARCHITECTURE/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  🏗️ 시스템 아키텍처
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="CAREER_PLAN/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  📋 직무 역량 계획서
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="KNOWLEDGE_SYSTEM/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  🧠 지식 체계 문서
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="tutorials/agent-loop/" class="md-tabs__link">
+          
+  
+  
+  🛠️ Phase 0 - Agent Loop 튜토리얼
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="tutorials/agent-loop/skills/agent-builder/SKILL/" class="md-tabs__link">
+          
+  
+  
+  ⚙️ 스킬 & 레퍼런스
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="print_page/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  📖 전체 핸드북 PDF 인쇄 / Print Book
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="네비게이션" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Agentic Engineering Handbook" class="md-nav__button md-logo" aria-label="Agentic Engineering Handbook" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Agentic Engineering Handbook
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 핸드북 메인 로드맵
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 핸드북 메인 로드맵
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-this-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Repository?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use-this-handbook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How To Use This Handbook
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-roadmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Learning Roadmap
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Learning Roadmap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phase-0-agent-loop-from-scratch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 0 — Agent Loop From Scratch
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-1-agent-foundations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 1 — Agent Foundations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phase 1 — Agent Foundations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-mental-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Mental Models
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-first" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Read First
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#then-read" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Then Read
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Build Exercise
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-2-mcp-tool-ecosystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 2 — MCP &amp; Tool Ecosystem
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phase 2 — MCP &amp; Tool Ecosystem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#read-first_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Read First
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#then-read_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Then Read
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-exercise_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Build Exercise
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-3-context-memory-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 3 — Context, Memory &amp; Skills
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phase 3 — Context, Memory &amp; Skills">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#read-first_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Read First
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#then-read_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Then Read
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-exercise_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Build Exercise
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-4-harness-long-running-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 4 — Harness &amp; Long-Running Agents
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phase 4 — Harness &amp; Long-Running Agents">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#read-first_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Read First
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#then-read_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Then Read
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-exercise_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Build Exercise
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-5-coding-workspace-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 5 — Coding &amp; Workspace Agents
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phase 5 — Coding &amp; Workspace Agents">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#read-first_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Read First
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#then-read_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Then Read
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-exercise_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Build Exercise
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-6-evals-safety-production" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 6 — Evals, Safety &amp; Production
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phase 6 — Evals, Safety &amp; Production">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#read-first_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Read First
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#then-read_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Then Read
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-exercise_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Build Exercise
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#applied-practice-tracks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Applied Practice Tracks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-reading-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full Reading Table
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#who-is-this-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Who Is This For?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contributing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contributing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vision" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vision
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#star-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Star History
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        License
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="ARCHITECTURE/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🏗️ 시스템 아키텍처
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="CAREER_PLAN/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📋 직무 역량 계획서
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="KNOWLEDGE_SYSTEM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🧠 지식 체계 문서
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    🛠️ Phase 0 - Agent Loop 튜토리얼
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    🛠️ Phase 0 - Agent Loop 튜토리얼
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tutorials/agent-loop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tutorials/agent-loop/v0-bash-is-all-you-need/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    v0 - Bash is All You Need
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tutorials/agent-loop/v1-model-as-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    v1 - Model as Agent
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tutorials/agent-loop/v2-structured-planning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    v2 - Structured Planning
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tutorials/agent-loop/v3-subagent-mechanism/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    v3 - Subagent Mechanism
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tutorials/agent-loop/v4-skills-mechanism/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    v4 - Skills Mechanism
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ⚙️ 스킬 & 레퍼런스
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ⚙️ 스킬 & 레퍼런스
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tutorials/agent-loop/skills/agent-builder/SKILL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Builder Skill
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tutorials/agent-loop/skills/agent-builder/references/agent-philosophy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agent Philosophy
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tutorials/agent-loop/skills/code-review/SKILL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Code Review Skill
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tutorials/agent-loop/skills/mcp-builder/SKILL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MCP Builder Skill
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tutorials/agent-loop/skills/pdf/SKILL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PDF Handling Skill
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="print_page/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📖 전체 핸드북 PDF 인쇄 / Print Book
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-this-repository" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why This Repository?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-use-this-handbook" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How To Use This Handbook
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#learning-roadmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Learning Roadmap
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Learning Roadmap">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#phase-0-agent-loop-from-scratch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 0 — Agent Loop From Scratch
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-1-agent-foundations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 1 — Agent Foundations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phase 1 — Agent Foundations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-mental-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Mental Models
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-first" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Read First
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#then-read" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Then Read
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-exercise" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Build Exercise
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-2-mcp-tool-ecosystem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 2 — MCP &amp; Tool Ecosystem
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phase 2 — MCP &amp; Tool Ecosystem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#read-first_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Read First
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#then-read_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Then Read
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-exercise_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Build Exercise
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-3-context-memory-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 3 — Context, Memory &amp; Skills
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phase 3 — Context, Memory &amp; Skills">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#read-first_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Read First
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#then-read_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Then Read
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-exercise_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Build Exercise
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-4-harness-long-running-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 4 — Harness &amp; Long-Running Agents
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phase 4 — Harness &amp; Long-Running Agents">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#read-first_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Read First
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#then-read_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Then Read
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-exercise_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Build Exercise
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-5-coding-workspace-agents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 5 — Coding &amp; Workspace Agents
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phase 5 — Coding &amp; Workspace Agents">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#read-first_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Read First
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#then-read_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Then Read
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-exercise_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Build Exercise
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#phase-6-evals-safety-production" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Phase 6 — Evals, Safety &amp; Production
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Phase 6 — Evals, Safety &amp; Production">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#read-first_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Read First
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#then-read_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Then Read
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#build-exercise_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Build Exercise
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#applied-practice-tracks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Applied Practice Tracks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-reading-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Full Reading Table
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#who-is-this-for" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Who Is This For?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contributing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contributing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vision" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vision
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#star-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Star History
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        License
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="agentic-engineering-handbook">Agentic Engineering Handbook<a class="headerlink" href="#agentic-engineering-handbook" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>The definitive OpenAI, Anthropic, Google, MCP, Harness, Evals, and Production Agent Systems learning roadmap.</p>
+</blockquote>
+<p><a href="https://github.com/keyuchen21/agentic-engineering-handbook/blob/main/LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" /></a>
+<a href="#"><img alt="Last Updated" src="https://img.shields.io/badge/Last%20Updated-2026--07--25-blue.svg" /></a></p>
+<p>If this repository helps you, consider giving it a ⭐</p>
+<hr />
+<h2 id="why-this-repository">Why This Repository?<a class="headerlink" href="#why-this-repository" title="Permanent link">&para;</a></h2>
+<p>The AI industry has entered the <strong>Agentic Era</strong>. Building production-grade AI systems now requires mastering agents, tool use, MCP, memory, long-running workflows, coding agents, agent harnesses, evals, and safety — but the knowledge is scattered across OpenAI blogs, Anthropic engineering posts, SDK docs, cookbooks, and research papers.</p>
+<p>This repository consolidates <strong>179 curated resources</strong> into one structured learning roadmap.</p>
+<p><strong>The goal: Become a world-class Agentic Engineer.</strong></p>
+<hr />
+<h2 id="how-to-use-this-handbook">How To Use This Handbook<a class="headerlink" href="#how-to-use-this-handbook" title="Permanent link">&para;</a></h2>
+<p>Pick the path that matches your starting point:</p>
+<ul>
+<li><strong>New to agents:</strong> follow the <a href="#learning-roadmap">Learning Roadmap</a> from Phase 0 to Phase 6. Treat each <code>Read First</code>, <code>Then Read</code>, and <code>Build Exercise</code> as a checklist.</li>
+<li><strong>Already building LLM apps:</strong> start at <a href="#phase-2--mcp--tool-ecosystem">Phase 2</a> or <a href="#phase-3--context-memory--skills">Phase 3</a>, then fill gaps in agent loop, tool calling, evals, and production engineering.</li>
+<li><strong>Trying to build projects:</strong> use the phase-level <code>Build Exercise</code> prompts, then branch into <a href="#applied-practice-tracks">Applied Practice Tracks</a> for coding agents, security, code review, or SRE.</li>
+<li><strong>Looking for references:</strong> jump to the <a href="#full-reading-table">Full Reading Table</a>. Read <code>P0</code> first, use <code>P1</code> for implementation detail, and keep <code>P2</code> as optional background.</li>
+</ul>
+<hr />
+<h2 id="learning-roadmap">Learning Roadmap<a class="headerlink" href="#learning-roadmap" title="Permanent link">&para;</a></h2>
+<h3 id="phase-0-agent-loop-from-scratch">Phase 0 — Agent Loop From Scratch<a class="headerlink" href="#phase-0-agent-loop-from-scratch" title="Permanent link">&para;</a></h3>
+<p>If you treat Claude Code as a coding CLI, many capabilities can feel like magic: it reads files, runs commands, edits code, delegates work, and stays oriented during complex tasks.</p>
+<p>From an engineering perspective, the core is much simpler:</p>
+<p><strong>model + tools + one loop.</strong></p>
+<p>Understanding that loop makes the rest of the system easier to reason about:</p>
+<ul>
+<li>When the agent should plan first, and when it should act immediately</li>
+<li>Why an explicit todo list reduces drift in longer tasks</li>
+<li>Why subagents improve exploration while protecting the main context</li>
+<li>How skills, MCP, and hooks each add capability around the same core loop</li>
+</ul>
+<p>These pages are based on the upstream English Markdown tutorials from <a href="https://github.com/shareAI-lab/mini-claude-code">shareAI-lab/mini-claude-code</a>, with added Study Notes and inline source code for this handbook.</p>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Page</th>
+<th>Code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v0</td>
+<td><a href="tutorials/agent-loop/v0-bash-is-all-you-need/">Bash is All You Need</a></td>
+<td><a href="tutorials/agent-loop/v0_bash_agent.py">v0_bash_agent.py</a></td>
+</tr>
+<tr>
+<td>v1</td>
+<td><a href="tutorials/agent-loop/v1-model-as-agent/">Model as Agent</a></td>
+<td><a href="tutorials/agent-loop/v1_basic_agent.py">v1_basic_agent.py</a></td>
+</tr>
+<tr>
+<td>v2</td>
+<td><a href="tutorials/agent-loop/v2-structured-planning/">Structured Planning</a></td>
+<td><a href="tutorials/agent-loop/v2_todo_agent.py">v2_todo_agent.py</a></td>
+</tr>
+<tr>
+<td>v3</td>
+<td><a href="tutorials/agent-loop/v3-subagent-mechanism/">Subagent Mechanism</a></td>
+<td><a href="tutorials/agent-loop/v3_subagent.py">v3_subagent.py</a></td>
+</tr>
+<tr>
+<td>v4</td>
+<td><a href="tutorials/agent-loop/v4-skills-mechanism/">Skills Mechanism</a></td>
+<td><a href="tutorials/agent-loop/v4_skills_agent.py">v4_skills_agent.py</a></td>
+</tr>
+</tbody>
+</table>
+<p>Supporting files are included in the same folder: <code>requirements.txt</code>, <code>.env.example</code>, <code>v0_bash_agent_mini.py</code>, and <code>skills/</code>.</p>
+<p><strong>Next reference:</strong> <a href="https://github.com/Sentdex/minion/blob/master/minion.py">minion.py</a> is a compact, single-file coding agent worth reading after this lab. It shows how an OpenAI-compatible agent loop grows to include tool calls, sessions, resume, approvals, memory, and context compaction.</p>
+<hr />
+<h3 id="phase-1-agent-foundations">Phase 1 — Agent Foundations<a class="headerlink" href="#phase-1-agent-foundations" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>Build shared vocabulary for workflow vs agent, tool loop, handoff, guardrails.</p>
+</blockquote>
+<h4 id="key-mental-models">Key Mental Models<a class="headerlink" href="#key-mental-models" title="Permanent link">&para;</a></h4>
+<p><strong>Should I build an agent?</strong> (4-question checklist from Barry Zhang's talk - Anthropic)</p>
+<table>
+<thead>
+<tr>
+<th>Question</th>
+<th>If No → Workflow</th>
+<th>If Yes → Agent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Is the task complex enough?</td>
+<td>Decision tree is fully mappable</td>
+<td>Ambiguous problem space</td>
+</tr>
+<tr>
+<td>Is the task valuable enough?</td>
+<td>&lt;$0.10 per run</td>
+<td>&gt;$1 per run, cost doesn't matter</td>
+</tr>
+<tr>
+<td>Are all core capabilities doable?</td>
+<td>Weak links break the chain</td>
+<td>Model handles every step well</td>
+</tr>
+<tr>
+<td>Is error cost low &amp; detectable?</td>
+<td>High cost + hard to detect → human-in-the-loop</td>
+<td>Errors caught by tests/CI</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Think like the agent.</strong> Most failures come from designing with a human perspective. Put yourself inside the agent's context window: you only see ~10K–20K tokens (system prompt + tool descriptions + recent observations). Ask: does the agent have enough information to act correctly at each step?</p>
+<p>→ Source: <a href="https://www.youtube.com/watch?v=D7_ipDqhtwk">How We Build Effective Agents</a></p>
+<h4 id="read-first">Read First<a class="headerlink" href="#read-first" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Title</th>
+<th>Vendor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><a href="https://platform.claude.com/docs/en/release-notes/system-prompts">System Prompts</a></td>
+<td>Anthropic</td>
+</tr>
+<tr>
+<td>2</td>
+<td><a href="https://developers.openai.com/api/docs/guides/prompt-guidance">Prompt guidance</a></td>
+<td>OpenAI</td>
+</tr>
+<tr>
+<td>3</td>
+<td><a href="https://developers.openai.com/api/docs/guides/function-calling">Function Calling</a></td>
+<td>OpenAI</td>
+</tr>
+<tr>
+<td>4</td>
+<td><a href="https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview">Tool use overview</a></td>
+<td>Anthropic</td>
+</tr>
+<tr>
+<td>5</td>
+<td><a href="https://ai.google.dev/gemini-api/docs/function-calling">Function calling - Gemini API</a></td>
+<td>Google</td>
+</tr>
+<tr>
+<td>6</td>
+<td><a href="https://www.anthropic.com/engineering/building-effective-agents">Building effective agents</a></td>
+<td>Anthropic</td>
+</tr>
+<tr>
+<td>7</td>
+<td><a href="https://openai.com/index/new-tools-for-building-agents/">New tools for building agents</a></td>
+<td>OpenAI</td>
+</tr>
+<tr>
+<td>8</td>
+<td><a href="https://developers.openai.com/api/docs/guides/agents">Agents SDK overview</a></td>
+<td>OpenAI</td>
+</tr>
+</tbody>
+</table>
+<h4 id="then-read">Then Read<a class="headerlink" href="#then-read" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Title</th>
+<th>Vendor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.youtube.com/watch?v=D7_ipDqhtwk">How We Build Effective Agents: Barry Zhang, Anthropic</a></td>
+<td>Anthropic</td>
+</tr>
+<tr>
+<td><a href="https://phistory.cc/">Phistory — Claude Code &amp; Codex CLI System Prompt Diff History</a></td>
+<td>Community</td>
+</tr>
+<tr>
+<td><a href="https://devin.ai/agents101">Coding Agents 101: The Art of Actually Getting Things Done</a></td>
+<td>Cognition</td>
+</tr>
+<tr>
+<td><a href="https://openai.github.io/openai-agents-python/examples/">OpenAI Agents SDK examples</a></td>
+<td>OpenAI</td>
+</tr>
+<tr>
+<td><a href="https://developers.openai.com/cookbook/examples/structured_outputs_multi_agent">Structured Outputs for Multi-Agent Systems</a></td>
+<td>OpenAI</td>
+</tr>
+</tbody>
+</table>
+<h4 id="build-exercise">Build Exercise<a class="headerlink" href="#build-exercise" title="Permanent link">&para;</a></h4>
+<p>Build a customer service/ticket triage agent: router → specialist → evaluator, with all outputs constrained by structured schemas.</p>
+<hr />
+<h3 id="phase-2-mcp-tool-ecosystem">Phase 2 — MCP &amp; Tool Ecosystem<a class="headerlink" href="#phase-2-mcp-tool-ecosystem" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>Understand MCP server/client, remote vs local, tool loading, approval, connector boundaries.</p>
+</blockquote>
+<h4 id="read-first_1">Read First<a class="headerlink" href="#read-first_1" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Title</th>
+<th>Vendor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><a href="https://www.anthropic.com/news/model-context-protocol">Introducing the Model Context Protocol</a></td>
+<td>Anthropic</td>
+</tr>
+<tr>
+<td>2</td>
+<td><a href="https://developers.openai.com/api/docs/guides/tools-connectors-mcp">MCP and Connectors</a></td>
+<td>OpenAI</td>
+</tr>
+<tr>
+<td>3</td>
+<td><a href="https://developers.openai.com/api/docs/mcp">Building MCP servers for ChatGPT Apps and API integrations</a></td>
+<td>OpenAI</td>
+</tr>
+</tbody>
+</table>
+<h4 id="then-read_1">Then Read<a class="headerlink" href="#then-read_1" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Title</th>
+<th>Vendor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.anthropic.com/engineering/code-execution-with-mcp">Code execution with MCP: Building more efficient agents</a></td>
+<td>Anthropic</td>
+</tr>
+<tr>
+<td><a href="https://www.anthropic.com/engineering/writing-tools-for-agents">Writing effective tools for AI agents - with AI agents</a></td>
+<td>Anthropic</td>
+</tr>
+<tr>
+<td><a href="https://developers.openai.com/codex/mcp">Model Context Protocol - Codex</a></td>
+<td>OpenAI</td>
+</tr>
+<tr>
+<td><a href="https://developers.cloudflare.com/agents/model-context-protocol/guides/remote-mcp-server/#add-authentication">Build a Remote MCP server</a></td>
+<td>Cloudflare</td>
+</tr>
+<tr>
+<td><a href="https://blog.modelcontextprotocol.io/posts/2025-09-08-mcp-registry-preview/">Introducing the MCP Registry</a></td>
+<td>MCP</td>
+</tr>
+<tr>
+<td><a href="https://developers.openai.com/learn/docs-mcp">OpenAI Docs MCP</a></td>
+<td>OpenAI</td>
+</tr>
+<tr>
+<td><a href="https://developers.openai.com/apps-sdk/build/chatgpt-ui">Build your ChatGPT UI</a></td>
+<td>OpenAI</td>
+</tr>
+</tbody>
+</table>
+<h4 id="build-exercise_1">Build Exercise<a class="headerlink" href="#build-exercise_1" title="Permanent link">&para;</a></h4>
+<p>Build a read-only repo/docs MCP server, then create an eval to verify the agent correctly cites documentation.</p>
+<hr />
+<h3 id="phase-3-context-memory-skills">Phase 3 — Context, Memory &amp; Skills<a class="headerlink" href="#phase-3-context-memory-skills" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>Learn to control context window, short/long-term memory, skills/plugins, CLAUDE.md/AGENTS.md.</p>
+</blockquote>
+<h4 id="read-first_2">Read First<a class="headerlink" href="#read-first_2" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Title</th>
+<th>Vendor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><a href="https://agentskills.io/specification">Agent Skills Specification</a></td>
+<td>Agent Skills</td>
+</tr>
+<tr>
+<td>2</td>
+<td><a href="https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents">Effective context engineering for AI agents</a></td>
+<td>Anthropic</td>
+</tr>
+<tr>
+<td>3</td>
+<td><a href="https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models">The new rules of context engineering for Claude 5 generation models</a></td>
+<td>Anthropic</td>
+</tr>
+<tr>
+<td>4</td>
+<td><a href="https://cloud.google.com/blog/products/data-analytics/how-the-open-knowledge-format-can-improve-data-sharing">How the Open Knowledge Format can improve data sharing</a></td>
+<td>Google Cloud</td>
+</tr>
+<tr>
+<td>5</td>
+<td><a href="https://www.dbreunig.com/2025/06/22/how-contexts-fail-and-how-to-fix-them.html">How Long Contexts Fail</a></td>
+<td>Drew Breunig</td>
+</tr>
+<tr>
+<td>6</td>
+<td><a href="https://research.trychroma.com/context-rot">Context Rot</a></td>
+<td>Chroma</td>
+</tr>
+<tr>
+<td>7</td>
+<td><a href="https://docs.claude-mem.ai/progressive-disclosure">Progressive disclosure</a></td>
+<td>Claude-Mem</td>
+</tr>
+<tr>
+<td>8</td>
+<td><a href="https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills">Equipping agents for the real world with Agent Skills</a></td>
+<td>Anthropic</td>
+</tr>
+<tr>
+<td>9</td>
+<td><a href="https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview">Agent Skills</a></td>
+<td>Anthropic</td>
+</tr>
+<tr>
+<td>10</td>
+<td><a href="https://developers.openai.com/api/docs/guides/tools-skills">Skills</a></td>
+<td>OpenAI</td>
+</tr>
+<tr>
+<td>11</td>
+<td><a href="https://developers.openai.com/cookbook/examples/agents_sdk/building_reliable_agents_memory_compaction">Building Reliable Agents with Memory and Compaction</a></td>
+<td>OpenAI</td>
+</tr>
+</tbody>
+</table>
+<h4 id="then-read_2">Then Read<a class="headerlink" href="#then-read_2" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Title</th>
+<th>Vendor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://developers.openai.com/codex/guides/agents-md">Custom instructions with AGENTS.md - Codex</a></td>
+<td>OpenAI</td>
+</tr>
+<tr>
+<td><a href="https://www.anthropic.com/engineering/claude-code-best-practices">Best practices for Claude Code</a></td>
+<td>Anthropic</td>
+</tr>
+<tr>
+<td><a href="https://developers.openai.com/codex/skills">Agent Skills - Codex</a></td>
+<td>OpenAI</td>
+</tr>
+<tr>
+<td><a href="https://developers.openai.com/cookbook/examples/skills_in_api">Skills in OpenAI API</a></td>
+<td>OpenAI</td>
+</tr>
+</tbody>
+</table>
+<h4 id="build-exercise_2">Build Exercise<a class="headerlink" href="#build-exercise_2" title="Permanent link">&para;</a></h4>
+<p>Implement the same task as a Skill/Plugin, then measure accuracy and token cost across three variants: no skill, long prompt, and skill-based.</p>
+<hr />
+<h3 id="phase-4-harness-long-running-agents">Phase 4 — Harness &amp; Long-Running Agents<a class="headerlink" href="#phase-4-harness-long-running-agents" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>Master agent runtime: event stream, thread, tool execution, state, sandbox, approval, recovery.</p>
+</blockquote>
+<h4 id="read-first_3">Read First<a class="headerlink" href="#read-first_3" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Title</th>
+<th>Vendor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><a href="https://openai.com/index/unrolling-the-codex-agent-loop/">Unrolling the Codex agent loop</a></td>
+<td>OpenAI</td>
+</tr>
+<tr>
+<td>2</td>
+<td><a href="https://openai.com/index/unlocking-the-codex-harness/">Unlocking the Codex harness: how we built the App Server</a></td>
+<td>OpenAI</td>
+</tr>
+<tr>
+<td>3</td>
+<td><a href="https://picrew.github.io/LLM-Harness/">Agent Harness Engineering: A Survey</a></td>
+<td>Academic</td>
+</tr>
+<tr>
+<td>4</td>
+<td><a href="https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents">Effective harnesses for long-running agents</a></td>
+<td>Anthropic</td>
+</tr>
+<tr>
+<td>5</td>
+<td><a href="https://code.claude.com/docs/en/workflows">Orchestrate subagents at scale with dynamic workflows</a></td>
+<td>Anthropic</td>
+</tr>
+<tr>
+<td>6</td>
+<td><a href="https://github.com/langchain-ai/deepagents">Deep Agents</a></td>
+<td>LangChain</td>
+</tr>
+</tbody>
+</table>
+<h4 id="then-read_3">Then Read<a class="headerlink" href="#then-read_3" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Title</th>
+<th>Vendor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://developers.openai.com/api/docs/guides/deep-research">Deep research</a></td>
+<td>OpenAI</td>
+</tr>
+<tr>
+<td><a href="https://github.com/langchain-ai/open_deep_research">Open Deep Research</a></td>
+<td>LangChain</td>
+</tr>
+<tr>
+<td><a href="https://openai.com/index/the-next-evolution-of-the-agents-sdk/">The next evolution of the Agents SDK</a></td>
+<td>OpenAI</td>
+</tr>
+<tr>
+<td><a href="https://claude.com/blog/a-harness-for-every-task-dynamic-workflows-in-claude-code">A harness for every task: dynamic workflows in Claude Code</a></td>
+<td>Anthropic</td>
+</tr>
+<tr>
+<td><a href="https://developers.openai.com/cookbook/articles/codex_exec_plans">Using PLANS.md for multi-hour problem solving</a></td>
+<td>OpenAI</td>
+</tr>
+<tr>
+<td><a href="https://developers.googleblog.com/build-long-running-ai-agents-that-pause-resume-and-never-lose-context-with-adk/">Build long-running AI agents that pause, resume, and never lose context with ADK</a></td>
+<td>Google</td>
+</tr>
+<tr>
+<td><a href="https://www.anthropic.com/engineering/harness-design-long-running-apps">Harness design for long-running application development</a></td>
+<td>Anthropic</td>
+</tr>
+<tr>
+<td><a href="https://www.anthropic.com/engineering/managed-agents">Scaling Managed Agents: Decoupling the brain from the hands</a></td>
+<td>Anthropic</td>
+</tr>
+</tbody>
+</table>
+<h4 id="build-exercise_3">Build Exercise<a class="headerlink" href="#build-exercise_3" title="Permanent link">&para;</a></h4>
+<p>Build a mini coding harness: plan file, shell tool, apply patch, test gate, event log, and resume capability.</p>
+<hr />
+<h3 id="phase-5-coding-workspace-agents">Phase 5 — Coding &amp; Workspace Agents<a class="headerlink" href="#phase-5-coding-workspace-agents" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>Compare Codex vs Claude Code product/SDK forms; learn multi-agent, IDE, workspace collaboration.</p>
+</blockquote>
+<h4 id="read-first_4">Read First<a class="headerlink" href="#read-first_4" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Title</th>
+<th>Vendor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><a href="https://agents.md/">AGENTS.md</a></td>
+<td>Agentic AI Foundation</td>
+</tr>
+<tr>
+<td>2</td>
+<td><a href="https://openai.com/index/introducing-codex/">Introducing Codex</a></td>
+<td>OpenAI</td>
+</tr>
+<tr>
+<td>3</td>
+<td><a href="https://www.anthropic.com/engineering/claude-code-best-practices">Best practices for Claude Code</a></td>
+<td>Anthropic</td>
+</tr>
+<tr>
+<td>4</td>
+<td><a href="https://claude.com/blog/how-claude-code-works-in-large-codebases-best-practices-and-where-to-start">How Claude Code works in large codebases</a></td>
+<td>Anthropic</td>
+</tr>
+<tr>
+<td>5</td>
+<td><a href="https://www.anthropic.com/news/enabling-claude-code-to-work-more-autonomously">Enabling Claude Code to work more autonomously</a></td>
+<td>Anthropic</td>
+</tr>
+</tbody>
+</table>
+<h4 id="then-read_4">Then Read<a class="headerlink" href="#then-read_4" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Title</th>
+<th>Vendor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://openai.com/index/introducing-the-codex-app/">Introducing the Codex app</a></td>
+<td>OpenAI</td>
+</tr>
+<tr>
+<td><a href="https://openai.com/index/introducing-workspace-agents-in-chatgpt/">Introducing workspace agents in ChatGPT</a></td>
+<td>OpenAI</td>
+</tr>
+<tr>
+<td><a href="https://www.anthropic.com/news/apple-xcode-claude-agent-sdk">Apple's Xcode now supports Claude Agent SDK</a></td>
+<td>Anthropic</td>
+</tr>
+<tr>
+<td><a href="https://developers.openai.com/cookbook/examples/codex/codex_mcp_agents_sdk/building_consistent_workflows_codex_cli_agents_sdk">Building Consistent Workflows with Codex CLI &amp; Agents SDK</a></td>
+<td>OpenAI</td>
+</tr>
+<tr>
+<td><a href="https://code.claude.com/docs/en/best-practices">Best practices for Claude Code</a></td>
+<td>Anthropic</td>
+</tr>
+<tr>
+<td><a href="https://blog.ravi-mehta.com/p/specs-are-the-new-source-code">The spec is dead, long live the spec!</a></td>
+<td>Ravi on Product</td>
+</tr>
+<tr>
+<td><a href="https://www-cdn.anthropic.com/58284b19e702b49db9302d5b6f135ad8871e7658.pdf">How Anthropic teams use Claude Code</a></td>
+<td>Anthropic</td>
+</tr>
+<tr>
+<td><a href="https://github.com/mihail911/modern-software-dev-assignments/tree/master/week8">Multi-stack Web App Builds</a></td>
+<td>Community</td>
+</tr>
+</tbody>
+</table>
+<h4 id="build-exercise_4">Build Exercise<a class="headerlink" href="#build-exercise_4" title="Permanent link">&para;</a></h4>
+<p>Run both OpenAI/Codex and Claude Code style workflows on the same repo: issue → plan → patch → tests → PR summary.</p>
+<hr />
+<h3 id="phase-6-evals-safety-production">Phase 6 — Evals, Safety &amp; Production<a class="headerlink" href="#phase-6-evals-safety-production" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p>Build pre/post-launch eval loop, trace loop, safety boundaries, permissions, regression monitoring.</p>
+</blockquote>
+<h4 id="read-first_5">Read First<a class="headerlink" href="#read-first_5" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Title</th>
+<th>Vendor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><a href="https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents">Demystifying evals for AI agents</a></td>
+<td>Anthropic</td>
+</tr>
+<tr>
+<td>2</td>
+<td><a href="https://www.braintrust.dev/blog/six-generations-ai-agents">The six generations of AI agents and how to eval them</a></td>
+<td>Braintrust</td>
+</tr>
+<tr>
+<td>3</td>
+<td><a href="https://www.langchain.com/blog/agent-observability-powers-agent-evaluation">Agent observability powers agent evaluation</a></td>
+<td>LangChain</td>
+</tr>
+<tr>
+<td>4</td>
+<td><a href="https://www.langchain.com/blog/agent-evaluation-readiness-checklist">Agent Evaluation Readiness Checklist</a></td>
+<td>LangChain</td>
+</tr>
+<tr>
+<td>5</td>
+<td><a href="https://developers.openai.com/cookbook/examples/agents_sdk/agent_improvement_loop">Build an Agent Improvement Loop with Traces, Evals, and Codex</a></td>
+<td>OpenAI</td>
+</tr>
+<tr>
+<td>6</td>
+<td><a href="https://developers.openai.com/cookbook/examples/partners/macro_evals_for_agentic_systems/macro_evals_for_agentic_systems">Macro Evals for Agentic Systems</a></td>
+<td>OpenAI</td>
+</tr>
+<tr>
+<td>7</td>
+<td><a href="https://developers.openai.com/blog/eval-skills">Testing Agent Skills Systematically with Evals</a></td>
+<td>OpenAI</td>
+</tr>
+</tbody>
+</table>
+<h4 id="then-read_5">Then Read<a class="headerlink" href="#then-read_5" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Title</th>
+<th>Vendor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.langchain.com/blog/how-we-build-evals-for-deep-agents">How we build evals for Deep Agents</a></td>
+<td>LangChain</td>
+</tr>
+<tr>
+<td><a href="https://futuresearch.ai/deep-research-bench/">Deep Research Bench</a></td>
+<td>FutureSearch</td>
+</tr>
+<tr>
+<td><a href="https://arize.com/blog/how-to-evaluate-tool-calling-agents/">How to Evaluate Tool-Calling Agents</a></td>
+<td>Arize</td>
+</tr>
+<tr>
+<td><a href="https://arize.com/blog/why-testing-ai-agents-is-non-negotiable/">AI agent evaluation: How to test, debug, and improve agents in production</a></td>
+<td>Arize</td>
+</tr>
+<tr>
+<td><a href="https://arxiv.org/html/2601.05111v1">A Survey on Agent-as-a-Judge</a></td>
+<td>Academic</td>
+</tr>
+<tr>
+<td><a href="https://openai.com/index/running-codex-safely/">Running Codex safely at OpenAI</a></td>
+<td>OpenAI</td>
+</tr>
+<tr>
+<td><a href="https://www.anthropic.com/engineering/how-we-contain-claude">How we contain Claude across products</a></td>
+<td>Anthropic</td>
+</tr>
+<tr>
+<td><a href="https://developers.openai.com/cookbook/examples/evaluation/use-cases/mcp_eval_notebook">Evals API Use-case - MCP Evaluation</a></td>
+<td>OpenAI</td>
+</tr>
+<tr>
+<td><a href="https://www.anthropic.com/news/measuring-agent-autonomy">Measuring AI agent autonomy in practice</a></td>
+<td>Anthropic</td>
+</tr>
+</tbody>
+</table>
+<h4 id="build-exercise_5">Build Exercise<a class="headerlink" href="#build-exercise_5" title="Permanent link">&para;</a></h4>
+<p>Build a smoke/macro eval suite for your agent: task success rate, tool misuse, prompt injection resistance, latency, cost, and human approval count.</p>
+<hr />
+<h2 id="applied-practice-tracks">Applied Practice Tracks<a class="headerlink" href="#applied-practice-tracks" title="Permanent link">&para;</a></h2>
+<p>Use these tracks after the core roadmap when you want to practice agentic engineering in real engineering workflows.</p>
+<table>
+<thead>
+<tr>
+<th>Track</th>
+<th>Start Here</th>
+<th>Why It Matters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Agentic coding workflow</td>
+<td><a href="https://devin.ai/agents101">Coding Agents 101</a>, <a href="https://claude.com/blog/how-claude-code-works-in-large-codebases-best-practices-and-where-to-start">How Claude Code works in large codebases</a>, <a href="https://www-cdn.anthropic.com/58284b19e702b49db9302d5b6f135ad8871e7658.pdf">How Anthropic teams use Claude Code</a></td>
+<td>Turns agent theory into day-to-day engineering habits: prompting, checkpoints, verification, parallel work, and team rollout.</td>
+</tr>
+<tr>
+<td>Spec-driven building</td>
+<td><a href="https://blog.ravi-mehta.com/p/specs-are-the-new-source-code">The spec is dead, long live the spec!</a>, <a href="https://github.com/mihail911/modern-software-dev-assignments/tree/master/week8">Multi-stack Web App Builds</a></td>
+<td>Treats specs, prompts, and assignments as executable source material for agents.</td>
+</tr>
+<tr>
+<td>Context failure modes</td>
+<td><a href="https://www.dbreunig.com/2025/06/22/how-contexts-fail-and-how-to-fix-them.html">How Long Contexts Fail</a>, <a href="https://research.trychroma.com/context-rot">Context Rot</a>, <a href="https://docs.claude-mem.ai/progressive-disclosure">Progressive disclosure</a></td>
+<td>Helps diagnose context poisoning, distraction, confusion, context degradation, and retrieval overload.</td>
+</tr>
+<tr>
+<td>Evals and observability</td>
+<td><a href="https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents">Demystifying evals for AI agents</a>, <a href="https://www.langchain.com/blog/agent-observability-powers-agent-evaluation">Agent observability powers agent evaluation</a>, <a href="https://www.langchain.com/blog/agent-evaluation-readiness-checklist">Agent Evaluation Readiness Checklist</a></td>
+<td>Builds the feedback loop for traces, datasets, graders, offline/online evals, and regression gates.</td>
+</tr>
+<tr>
+<td>Deep research agents</td>
+<td><a href="https://developers.openai.com/api/docs/guides/deep-research">Deep research</a>, <a href="https://github.com/langchain-ai/open_deep_research">Open Deep Research</a>, <a href="https://github.com/Alibaba-NLP/DeepResearch">Alibaba-NLP/DeepResearch</a></td>
+<td>Practices long-running research agents: planning, search, MCP, citations, report synthesis, and benchmark-driven improvement.</td>
+</tr>
+<tr>
+<td>MCP operations</td>
+<td><a href="https://developers.cloudflare.com/agents/model-context-protocol/guides/remote-mcp-server/#add-authentication">Build a Remote MCP server</a>, <a href="https://blog.modelcontextprotocol.io/posts/2025-09-08-mcp-registry-preview/">Introducing the MCP Registry</a></td>
+<td>Shows how MCP moves from local prototypes to authenticated, discoverable, production-grade tool ecosystems.</td>
+</tr>
+<tr>
+<td>Agent security</td>
+<td><a href="https://owasp.org/www-project-top-ten/">OWASP Top Ten</a>, <a href="https://www.splunk.com/en_us/blog/learn/sast-vs-dast.html">SAST vs. DAST vs. RASP</a>, <a href="https://embracethered.com/blog/posts/2025/github-copilot-remote-code-execution-via-prompt-injection/">Copilot Remote Code Execution via Prompt Injection</a></td>
+<td>Grounds agent security in classic AppSec plus new prompt-injection and tool-permission failure modes.</td>
+</tr>
+<tr>
+<td>Code review systems</td>
+<td><a href="https://github.blog/developer-skills/github/how-to-review-code-effectively-a-github-staff-engineers-philosophy/">How to Review Code Effectively</a>, <a href="https://arxiv.org/pdf/2405.13565">AI-Assisted Assessment of Coding Practices in Modern Code Review</a>, <a href="https://graphite.dev/guides/ai-code-review-implementation-best-practices">AI Code Review Implementation Best Practices</a></td>
+<td>Connects human review quality with AI-assisted review, automated comments, and review policy design.</td>
+</tr>
+<tr>
+<td>Production and SRE agents</td>
+<td><a href="https://www.evidentlyai.com/ml-system-design">ML and LLM system design</a>, <a href="https://sre.google/sre-book/introduction/">Introduction to Site Reliability Engineering</a>, <a href="https://last9.io/blog/traces-spans-observability-basics/">Observability Basics You Should Know</a></td>
+<td>Extends agents beyond coding into incidents, observability, root-cause analysis, on-call, and production operations.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="full-reading-table">Full Reading Table<a class="headerlink" href="#full-reading-table" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>Priority guide:</strong> P0 = must-read (architectural/conceptual), P1 = highly useful (implementation detail), P2 = optional context (background/releases).</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Priority</th>
+<th>Title</th>
+<th>Vendor</th>
+<th>Topic</th>
+<th>Key Idea</th>
+<th>Date</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P0</td>
+<td><a href="https://developers.openai.com/blog/openai-for-developers-2025">OpenAI for Developers in 2025</a></td>
+<td>OpenAI</td>
+<td>Agents; MCP; Platform</td>
+<td>Annual overview: systematic walkthrough of Responses API, Agents SDK, AgentKit, Codex, MCP, Apps SDK, and AGENTS.md.</td>
+<td>2025-12-30</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://openai.com/index/new-tools-for-building-agents/">New tools for building agents</a></td>
+<td>OpenAI</td>
+<td>Agents; Responses API; Tools</td>
+<td>Key starting point for OpenAI's agent platform: Responses API, built-in web/file/computer tools, Agents SDK, tracing/observability.</td>
+<td>2025-03-11</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://openai.com/index/introducing-agentkit/">Introducing AgentKit</a></td>
+<td>OpenAI</td>
+<td>Agents; Evals; AgentKit</td>
+<td>AgentKit, expanded evals, agent RFT: the official agent toolchain from prototype to production.</td>
+<td>2025-10-06</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://developers.openai.com/api/docs/guides/prompt-guidance">Prompt guidance</a></td>
+<td>OpenAI</td>
+<td>Prompting; Models; Agent UX</td>
+<td>Official model-specific prompting guidance for outcome-first prompts, reasoning effort, preambles, and validation rules in tool-heavy workflows.</td>
+<td>Current docs</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://platform.claude.com/docs/en/release-notes/system-prompts">System Prompts</a></td>
+<td>Anthropic</td>
+<td>System prompts; Claude; Behavior</td>
+<td>Claude web/mobile system prompt release notes; useful for studying production prompting patterns and behavioral scaffolding.</td>
+<td>Current docs</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://developers.openai.com/api/docs/guides/agents">Agents SDK overview</a></td>
+<td>OpenAI</td>
+<td>Agents; SDK</td>
+<td>Official SDK entry point: concepts and boundaries of agent, tool, handoff, guardrail, and tracing.</td>
+<td>Current docs</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://www.anthropic.com/news/model-context-protocol">Introducing the Model Context Protocol</a></td>
+<td>Anthropic</td>
+<td>MCP; Standards</td>
+<td>The origin article for MCP: an open standard connecting AI assistants to data, tools, and systems.</td>
+<td>2024-11-25</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://www.anthropic.com/engineering/building-effective-agents">Building effective agents</a></td>
+<td>Anthropic</td>
+<td>Agents; Patterns; Frameworks</td>
+<td>Essential agent primer: workflow vs agent, prompt/tool/retrieval, orchestrator-worker, evaluator-optimizer patterns.</td>
+<td>2024-12-19</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://devin.ai/agents101">Coding Agents 101: The Art of Actually Getting Things Done</a></td>
+<td>Cognition</td>
+<td>Coding agents; Workflows; Practice</td>
+<td>Product-agnostic guide to prompting, delegation, verification, environment setup, security, and cost management for coding agents.</td>
+<td>2025-06</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://github.com/Sentdex/minion/blob/master/minion.py">minion.py</a></td>
+<td>Sentdex</td>
+<td>Agent loop; Coding agents; Reference implementation</td>
+<td>Compact single-file coding agent showing OpenAI-compatible model calls, tool-call parsing, sessions, resume, approvals, memory, and context compaction in runnable Python.</td>
+<td>Current repo</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://agents.md/">AGENTS.md</a></td>
+<td>Agentic AI Foundation</td>
+<td>Coding agents; Repo instructions; Standards</td>
+<td>Open Markdown convention for giving coding agents setup, test, style, safety, and workflow instructions across repos and tools.</td>
+<td>Current docs</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://openai.com/index/new-tools-and-features-in-the-responses-api/">New tools and features in the Responses API</a></td>
+<td>OpenAI</td>
+<td>MCP; Responses API; Tools</td>
+<td>Responses API extended to remote MCP servers, image/code/file tools; see how OpenAI integrates MCP into its runtime.</td>
+<td>2025-05-21</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://developers.openai.com/api/docs/guides/tools-connectors-mcp">MCP and Connectors</a></td>
+<td>OpenAI</td>
+<td>MCP; Connectors; Responses API</td>
+<td>Official guide to connecting remote MCP servers and connectors; includes approvals and security considerations.</td>
+<td>Current docs</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://developers.openai.com/api/docs/mcp">Building MCP servers for ChatGPT Apps and API integrations</a></td>
+<td>OpenAI</td>
+<td>MCP; ChatGPT Apps; API</td>
+<td>Official guide to writing MCP servers: supply tools/knowledge to ChatGPT Apps, deep research, and API integrations.</td>
+<td>Current docs</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://developers.openai.com/api/docs/guides/deep-research">Deep research</a></td>
+<td>OpenAI</td>
+<td>Deep research; MCP; API</td>
+<td>Official guide to deep research models, including web search, file search, remote MCP servers, code interpreter, and security risks.</td>
+<td>Current docs</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://developers.openai.com/cookbook/examples/deep_research_api/how_to_build_a_deep_research_mcp_server/readme">Building a Deep Research MCP Server</a></td>
+<td>OpenAI</td>
+<td>MCP; Deep research</td>
+<td>Minimal implementation of a search/fetch MCP server for Deep Research.</td>
+<td>2025-06-25</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://developers.openai.com/codex/mcp">Model Context Protocol - Codex</a></td>
+<td>OpenAI</td>
+<td>MCP; Codex</td>
+<td>How Codex CLI/IDE connects to MCP servers, adding Figma, browser, docs, and internal tool context to agents.</td>
+<td>Current docs</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://openai.com/index/introducing-codex/">Introducing Codex</a></td>
+<td>OpenAI</td>
+<td>Agents; Coding; Sandbox</td>
+<td>Cloud-based software engineering agent: parallel tasks, repo sandbox, running tests/linters/type checkers, producing auditable evidence.</td>
+<td>2025-05-16</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://picrew.github.io/LLM-Harness/">Agent Harness Engineering: A Survey</a></td>
+<td>Academic</td>
+<td>Harness; Taxonomy; Agent architecture</td>
+<td>Survey that frames harness engineering as its own system layer and introduces the ETCLOVG taxonomy: Execution, Tooling, Context, Lifecycle, Observability, Verification, and Governance.</td>
+<td>2026</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://openai.com/index/unrolling-the-codex-agent-loop/">Unrolling the Codex agent loop</a></td>
+<td>OpenAI</td>
+<td>Harness; Agent loop; Codex</td>
+<td>How Codex CLI chains prompt, tool schema, MCP tools, Responses API, and context management into an agent loop.</td>
+<td>2026-01-23</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://openai.com/index/unlocking-the-codex-harness/">Unlocking the Codex harness: how we built the App Server</a></td>
+<td>OpenAI</td>
+<td>Harness; Codex App Server; JSON-RPC</td>
+<td>Core harness article: Codex core, App Server, JSON-RPC, streaming progress, approval, diff, and thread management.</td>
+<td>2026-02-04</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://openai.com/index/equip-responses-api-computer-environment/">From model to agent: Equipping the Responses API with a computer environment</a></td>
+<td>OpenAI</td>
+<td>Harness; Responses API; Sandbox</td>
+<td>Responses API + shell tool + hosted containers form the agent runtime; essential for understanding the model-to-agent execution environment.</td>
+<td>2026-03-10</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://openai.com/index/harness-engineering/">Harness engineering: leveraging Codex in an agent-first world</a></td>
+<td>OpenAI</td>
+<td>Harness; Agent-first engineering</td>
+<td>Design product code, tests, CI, docs, and observability to be agent-readable/executable; learn agent-first repo organization.</td>
+<td>2026-02-11</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://openai.com/index/the-next-evolution-of-the-agents-sdk/">The next evolution of the Agents SDK</a></td>
+<td>OpenAI</td>
+<td>Harness; Agents SDK; MCP; Skills</td>
+<td>Agents SDK harness becomes more complete: memory, sandbox orchestration, Codex-like filesystem tools, MCP, skills, AGENTS.md.</td>
+<td>2026-04-15</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://developers.openai.com/cookbook/examples/codex/codex_mcp_agents_sdk/building_consistent_workflows_codex_cli_agents_sdk">Building Consistent Workflows with Codex CLI &amp; Agents SDK</a></td>
+<td>OpenAI</td>
+<td>MCP; Codex; Agents SDK</td>
+<td>Codex CLI as an MCP server integrated with Agents SDK; real multi-agent dev workflow.</td>
+<td>2025-10-01</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://developers.openai.com/cookbook/examples/agents_sdk/building_reliable_agents_memory_compaction">Building Reliable Agents with Memory and Compaction</a></td>
+<td>OpenAI</td>
+<td>Memory; Compaction; Reliability</td>
+<td>Memory and compaction design for long-context/multi-turn agents.</td>
+<td>2026-05-01</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://developers.openai.com/cookbook/examples/agents_sdk/agent_improvement_loop">Build an Agent Improvement Loop with Traces, Evals, and Codex</a></td>
+<td>OpenAI</td>
+<td>Evals; Traces; Self-improvement</td>
+<td>Connect traces, evals, and Codex fixes into an agent improvement loop.</td>
+<td>2026-05-12</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://developers.openai.com/cookbook/topic/evals">Eval Driven System Design - From Prototype to Production</a></td>
+<td>OpenAI</td>
+<td>Evals; Production</td>
+<td>Use evals as the driving force for system design; ideal for moving agents from demo to production.</td>
+<td>2025-06-02</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://developers.openai.com/blog/eval-skills">Testing Agent Skills Systematically with Evals</a></td>
+<td>OpenAI</td>
+<td>Evals; Skills; Agents</td>
+<td>Systematically test agent skills with evals; establish quality gates before skill release.</td>
+<td>2026-01-22</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://developers.openai.com/cookbook/examples/evaluation/use-cases/mcp_eval_notebook">Evals API Use-case - MCP Evaluation</a></td>
+<td>OpenAI</td>
+<td>MCP; Evals</td>
+<td>Evaluate QA/retrieval capabilities with MCP tools; ideal for building an MCP regression suite.</td>
+<td>2025-06-09</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://www.braintrust.dev/blog/six-generations-ai-agents">The six generations of AI agents and how to eval them</a></td>
+<td>Braintrust</td>
+<td>Evals; Agent architecture; Harness</td>
+<td>Maps six generations of agent architecture to the eval strategy each generation requires, from prompts to AI harnesses.</td>
+<td>2026-05-21</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://www.langchain.com/blog/agent-observability-powers-agent-evaluation">Agent observability powers agent evaluation</a></td>
+<td>LangChain</td>
+<td>Evals; Observability; Traces</td>
+<td>Explains why traces are the source of truth for agent behavior and how observability feeds evaluation.</td>
+<td>2026-01-27</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://openai.com/index/running-codex-safely/">Running Codex safely at OpenAI</a></td>
+<td>OpenAI</td>
+<td>Safety; Sandbox; Codex</td>
+<td>How OpenAI runs Codex internally: sandbox, approvals, network policy, agent-native telemetry.</td>
+<td>2026-05-20</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://developers.openai.com/cookbook/topic/agents">Building Governed AI Agents - A Practical Guide to Agentic Scaffolding</a></td>
+<td>OpenAI</td>
+<td>Governance; Guardrails; Agents</td>
+<td>Governed agent scaffolding: permissions, guardrails, auditing, and organizational policies.</td>
+<td>2026-02-23</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://developers.openai.com/cookbook/examples/partners/macro_evals_for_agentic_systems/macro_evals_for_agentic_systems">Macro Evals for Agentic Systems</a></td>
+<td>OpenAI</td>
+<td>Evals; Agentic systems</td>
+<td>Evaluate agents at the end-to-end/macro level, not just individual step outputs.</td>
+<td>2026-05-19</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://www.anthropic.com/engineering/claude-code-best-practices">Best practices for Claude Code</a></td>
+<td>Anthropic</td>
+<td>Coding agents; Claude Code</td>
+<td>Claude Code methodology: verification loop, explore-plan-code, CLAUDE.md, permissions, MCP, subagents, context management.</td>
+<td>2025-04-18</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://code.claude.com/docs/en/best-practices">Best practices for Claude Code</a></td>
+<td>Anthropic</td>
+<td>Claude Code; Coding agents; Workflow</td>
+<td>Official Claude Code docs for planning, CLAUDE.md, verification, tool use, and team workflows.</td>
+<td>Current docs</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://claude.com/blog/how-claude-code-works-in-large-codebases-best-practices-and-where-to-start">How Claude Code works in large codebases</a></td>
+<td>Anthropic</td>
+<td>Claude Code; Large codebases; Enterprise</td>
+<td>Patterns for large-codebase Claude Code adoption: layered CLAUDE.md, hooks, skills, plugins, MCP, LSP, subagents, and rollout ownership.</td>
+<td>2026-05-14</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://www.anthropic.com/engineering/multi-agent-research-system">How we built our multi-agent research system</a></td>
+<td>Anthropic</td>
+<td>Agents; Multi-agent; Research</td>
+<td>Claude Research multi-agent architecture: planner + parallel research agents + synthesis; production multi-agent experience.</td>
+<td>2025-06-13</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://www.anthropic.com/engineering/writing-tools-for-agents">Writing effective tools for AI agents - with AI agents</a></td>
+<td>Anthropic</td>
+<td>Tools; MCP; Evals</td>
+<td>Tool quality determines agent quality: tool descriptions, context budget, eval, and letting Claude optimize its own tools.</td>
+<td>2025-09-11</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents">Effective context engineering for AI agents</a></td>
+<td>Anthropic</td>
+<td>Context; Agents</td>
+<td>Context is the agent's core resource: selection, compression, isolation, persistence, and context pollution control.</td>
+<td>2025-09-29</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models">The new rules of context engineering for Claude 5 generation models</a></td>
+<td>Anthropic</td>
+<td>Context; Claude Code; Skills</td>
+<td>Newer context-engineering patterns: lighter instructions, tool interfaces over prompt rules, progressive disclosure, and reusable skills.</td>
+<td>2026-07-24</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://www.dbreunig.com/2025/06/22/how-contexts-fail-and-how-to-fix-them.html">How Long Contexts Fail</a></td>
+<td>Drew Breunig</td>
+<td>Context; Long context; Agents</td>
+<td>Taxonomy of context poisoning, distraction, confusion, and clash; practical fixes for overloaded agent contexts.</td>
+<td>2025-06-22</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://research.trychroma.com/context-rot">Context Rot</a></td>
+<td>Chroma</td>
+<td>Context; Long-context evals</td>
+<td>Research on how LLM performance degrades as input grows, especially with distractors and similar-but-wrong context.</td>
+<td>2025-07-16</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://www.anthropic.com/news/enabling-claude-code-to-work-more-autonomously">Enabling Claude Code to work more autonomously</a></td>
+<td>Anthropic</td>
+<td>Claude Code; Agent SDK; Subagents</td>
+<td>Claude Agent SDK, subagents, hooks, background tasks, checkpoints, and other autonomous coding agent capabilities.</td>
+<td>2025-09-29</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills">Equipping agents for the real world with Agent Skills</a></td>
+<td>Anthropic</td>
+<td>Skills; Agents</td>
+<td>Agent Skills as modular capability packages: instructions, resources, scripts — reducing context burden and improving reliability.</td>
+<td>2025-10-16</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://platform.claude.com/docs/en/agents-and-tools/agent-skills/overview">Agent Skills</a></td>
+<td>Anthropic</td>
+<td>Skills; Claude; Progressive disclosure</td>
+<td>Official Claude Agent Skills docs: modular instructions, metadata, scripts, resources, and on-demand loading across Claude products.</td>
+<td>Current docs</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://developers.openai.com/api/docs/guides/tools-skills">Skills</a></td>
+<td>OpenAI</td>
+<td>Skills; API; Shell environments</td>
+<td>Official OpenAI API guide for uploading, managing, and attaching reusable Skills to hosted and local shell environments.</td>
+<td>Current docs</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://agentskills.io/specification">Agent Skills Specification</a></td>
+<td>Agent Skills</td>
+<td>Skills; Specification; Progressive disclosure</td>
+<td>Complete skill package format: SKILL.md frontmatter, optional scripts/references/assets, file references, and validation.</td>
+<td>Current docs</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://www.anthropic.com/engineering/code-execution-with-mcp">Code execution with MCP: Building more efficient agents</a></td>
+<td>Anthropic</td>
+<td>MCP; Code execution; Context</td>
+<td>Key article on MCP scale challenges: reduce token overhead with code execution/on-demand tools; learn progressive disclosure.</td>
+<td>2025-11-04</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://www.anthropic.com/engineering/advanced-tool-use">Introducing advanced tool use on Claude Developer Platform</a></td>
+<td>Anthropic</td>
+<td>Tools; MCP; Advanced tool use</td>
+<td>Tool search, deferred loading, programmatic tool calling; solving context pollution from large numbers of MCP tools.</td>
+<td>2025-11-24</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents">Effective harnesses for long-running agents</a></td>
+<td>Anthropic</td>
+<td>Harness; Long-running agents</td>
+<td>Essential harness reading: working across multiple context windows, task logging, external state, agent self-recovery.</td>
+<td>2025-11-26</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://code.claude.com/docs/en/workflows">Orchestrate subagents at scale with dynamic workflows</a></td>
+<td>Anthropic</td>
+<td>Harness; Workflows; Subagents</td>
+<td>Claude Code workflows move orchestration into rerunnable scripts, scaling subagents for audits, migrations, research, verification loops, and repeatable team workflows.</td>
+<td>Current docs</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://github.com/langchain-ai/deepagents">Deep Agents</a></td>
+<td>LangChain</td>
+<td>Harness; Long-running agents; Deep research</td>
+<td>Opinionated open-source agent harness for planning, context management, subagents, filesystem, memory, and human-in-the-loop workflows.</td>
+<td>Current repo</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://www.anthropic.com/engineering/demystifying-evals-for-ai-agents">Demystifying evals for AI agents</a></td>
+<td>Anthropic</td>
+<td>Evals; Agents</td>
+<td>Agent evals are more complex than static evals: multi-turn, tools, state changes, creative solutions, failure taxonomy.</td>
+<td>2026-01-09</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://www.anthropic.com/news/measuring-agent-autonomy">Measuring AI agent autonomy in practice</a></td>
+<td>Anthropic</td>
+<td>Agents; Autonomy; Measurement</td>
+<td>Quantify agent autonomy using metrics like task duration and supervision needs; ideal for building autonomy benchmarks.</td>
+<td>2026-02-18</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://www.anthropic.com/engineering/harness-design-long-running-apps">Harness design for long-running application development</a></td>
+<td>Anthropic</td>
+<td>Harness; Application development</td>
+<td>Harness design patterns for delegating long-running app development tasks to agents; compare with OpenAI Codex harness.</td>
+<td>2026-03-24</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://www.anthropic.com/engineering/managed-agents">Scaling Managed Agents: Decoupling the brain from the hands</a></td>
+<td>Anthropic</td>
+<td>Managed agents; Harness</td>
+<td>Decouple the model brain from execution hands/harness, keeping interfaces stable as the harness evolves.</td>
+<td>2026-04-08</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://www.anthropic.com/engineering/how-we-contain-claude">How we contain Claude across products</a></td>
+<td>Anthropic</td>
+<td>Safety; Containment; Agents</td>
+<td>Blast radius of powerful agent releases, human-in-the-loop, and containment strategies.</td>
+<td>2026-05-25</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://developers.openai.com/cookbook/examples/structured_outputs_multi_agent">Structured Outputs for Multi-Agent Systems</a></td>
+<td>OpenAI</td>
+<td>Agents; Multi-agent; Structured outputs</td>
+<td>Use strict schemas to constrain structured messages and handoffs between multiple agents.</td>
+<td>2024-08-06</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://www.anthropic.com/news/3-5-models-and-computer-use">Introducing computer use, a new Claude 3.5 Sonnet, and Claude 3.5 Haiku</a></td>
+<td>Anthropic</td>
+<td>Agents; Computer use</td>
+<td>Claude computer use beta starting point: the model uses a computer via screenshots and actions.</td>
+<td>2024-10-22</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://www.anthropic.com/engineering/swe-bench-sonnet">Raising the bar on SWE-bench Verified with Claude 3.5 Sonnet</a></td>
+<td>Anthropic</td>
+<td>Agents; Coding; Evals</td>
+<td>SWE-bench agent scaffolding article: same model performance strongly depends on harness/scaffolding.</td>
+<td>2025-01-06</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://openai.com/index/introducing-operator/">Introducing Operator</a></td>
+<td>OpenAI</td>
+<td>Agents; Computer use; Safety</td>
+<td>Early product form of browser-based agents: model clicks, types, and executes tasks on web pages, emphasizing user confirmation and safety boundaries.</td>
+<td>2025-01-23</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://openai.com/index/computer-using-agent/">Computer-Using Agent</a></td>
+<td>OpenAI</td>
+<td>Agents; Computer use</td>
+<td>Understand how CUA combines vision, mouse/keyboard actions, and environment feedback into an agent loop; compare with Claude computer use.</td>
+<td>2025-01-23</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://www.anthropic.com/news/claude-3-7-sonnet">Claude 3.7 Sonnet and Claude Code</a></td>
+<td>Anthropic</td>
+<td>Agents; Coding; Claude Code</td>
+<td>Early release of Claude Code, marking Claude's entry into the agentic coding tool space.</td>
+<td>2025-02-24</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://www.anthropic.com/engineering/claude-think-tool">The think tool: Enabling Claude to stop and think in complex tool use situations</a></td>
+<td>Anthropic</td>
+<td>Tools; Reasoning; Agents</td>
+<td>Give the model an explicit think tool in complex tool-use chains; learn tool design for policy-heavy/multi-step decisions.</td>
+<td>2025-03-20</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://developers.openai.com/cookbook/topic/agents">Evaluating Agents with Langfuse</a></td>
+<td>OpenAI</td>
+<td>Evals; Agents</td>
+<td>Observe and evaluate Agents SDK runs with Langfuse; learn tracing/eval workflows.</td>
+<td>2025-03-31</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://developers.openai.com/cookbook/examples/agents_sdk/parallel_agents">Parallel Agents with the OpenAI Agents SDK</a></td>
+<td>OpenAI</td>
+<td>Agents; Parallelism; Agents SDK</td>
+<td>Parallel agent patterns: decompose tasks, execute in parallel, aggregate results.</td>
+<td>2025-05-01</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://developers.openai.com/cookbook/examples/agents_sdk/multi-agent-portfolio-collaboration/multi_agent_portfolio_collaboration">Multi-Agent Portfolio Collaboration with OpenAI Agents SDK</a></td>
+<td>OpenAI</td>
+<td>Agents; Multi-agent; Portfolio</td>
+<td>Multi-agent collaboration business example: research, analysis, combined output.</td>
+<td>2025-05-28</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://developers.openai.com/cookbook/topic/agents">MCP-Powered Agentic Voice Framework</a></td>
+<td>OpenAI</td>
+<td>MCP; Voice; Agents</td>
+<td>Voice agent + MCP paradigm: real-time interaction, tool extension, task execution.</td>
+<td>2025-06-17</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://developers.openai.com/cookbook/examples/deep_research_api/introduction_to_deep_research_api_agents">Deep Research API with the Agents SDK</a></td>
+<td>OpenAI</td>
+<td>Agents; Deep research; Agents SDK</td>
+<td>Integrate Deep Research API into Agents SDK workflows.</td>
+<td>2025-06-25</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://github.com/langchain-ai/open_deep_research">Open Deep Research</a></td>
+<td>LangChain</td>
+<td>Deep research; LangGraph; MCP</td>
+<td>Configurable open-source deep research agent that supports multiple model providers, search tools, MCP servers, and benchmark evaluation.</td>
+<td>Current repo</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://github.com/Alibaba-NLP/DeepResearch">Alibaba-NLP/DeepResearch</a></td>
+<td>Alibaba</td>
+<td>Deep research; Open-weight models; Web agents</td>
+<td>Open-weight Tongyi DeepResearch model/repo for long-horizon information-seeking benchmarks; useful after learning the harness and API layers.</td>
+<td>Current repo</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://www.anthropic.com/engineering/desktop-extensions">Desktop Extensions: One-click MCP server installation for Claude Desktop</a></td>
+<td>Anthropic</td>
+<td>MCP; Claude Desktop; Packaging</td>
+<td>Package local MCP servers as one-click install extensions; learn MCP distribution/installation/local permission issues.</td>
+<td>2025-06-26</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://developers.openai.com/cookbook/topic/agents">Building a Supply-Chain Copilot with OpenAI Agent SDK and Databricks MCP Servers</a></td>
+<td>OpenAI</td>
+<td>MCP; Agents; Databricks</td>
+<td>Enterprise data platform MCP + Agent SDK business agent example.</td>
+<td>2025-07-08</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://openai.com/index/introducing-chatgpt-agent/">Introducing ChatGPT agent: bridging research and action</a></td>
+<td>OpenAI</td>
+<td>Agents; ChatGPT; Computer use</td>
+<td>End-user-facing ChatGPT agent: combining research, browser, computer use, file/slide capabilities.</td>
+<td>2025-07-17</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://openai.com/index/chatgpt-agent-system-card/">ChatGPT agent System Card</a></td>
+<td>OpenAI</td>
+<td>Agents; Safety; Evals</td>
+<td>Learn pre-launch risk classification, evaluation, permissions, human confirmation, and abuse prevention for agent products.</td>
+<td>2025-07-17</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://developers.openai.com/cookbook/topic/agents">Context Engineering - Short-Term Memory Management with Sessions</a></td>
+<td>OpenAI</td>
+<td>Context; Sessions; Agents</td>
+<td>How short-term memory/session state affects agent reliability.</td>
+<td>2025-09-09</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://cloud.google.com/blog/products/data-analytics/how-the-open-knowledge-format-can-improve-data-sharing">How the Open Knowledge Format can improve data sharing</a></td>
+<td>Google Cloud</td>
+<td>Knowledge; Context; Data agents; Standards</td>
+<td>Introduces OKF as a YAML-based way to package schemas, metrics, APIs, docs, and governance context for humans and AI agents.</td>
+<td>2025-10-09</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://docs.claude-mem.ai/progressive-disclosure">Progressive disclosure</a></td>
+<td>Claude-Mem</td>
+<td>Context; Memory; Progressive disclosure</td>
+<td>Make retrieval costs visible and let the agent fetch details on demand, reducing context pollution and attention waste.</td>
+<td>Current docs</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://openai.com/index/introducing-upgrades-to-codex/">Introducing upgrades to Codex</a></td>
+<td>OpenAI</td>
+<td>Agents; Coding; IDE</td>
+<td>Codex evolves from research preview to daily dev tool: CLI, IDE, web/mobile collaboration, and more independent task execution.</td>
+<td>2025-09-15</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://www.anthropic.com/news/claude-sonnet-4-5">Introducing Claude Sonnet 4.5</a></td>
+<td>Anthropic</td>
+<td>Agents; Claude Agent SDK; Computer use</td>
+<td>Sonnet 4.5 emphasizes coding, complex agents, computer use, with simultaneous Agent SDK launch.</td>
+<td>2025-09-29</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://openai.com/index/introducing-apps-in-chatgpt/">Introducing apps in ChatGPT and the new Apps SDK</a></td>
+<td>OpenAI</td>
+<td>MCP; Apps; ChatGPT</td>
+<td>Apps SDK extends UI and tool server via MCP; entry point for understanding the ChatGPT app / MCP app ecosystem.</td>
+<td>2025-10-06</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://developers.openai.com/apps-sdk/build/chatgpt-ui">Build your ChatGPT UI</a></td>
+<td>OpenAI</td>
+<td>MCP; Apps SDK; UI</td>
+<td>Build custom UI components that turn structured MCP tool results into interactive ChatGPT app interfaces.</td>
+<td>Current docs</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://openai.com/index/codex-now-generally-available/">Codex is now generally available</a></td>
+<td>OpenAI</td>
+<td>Agents; Coding; Codex SDK</td>
+<td>Codex GA, Slack integration, Codex SDK, admin tools; see how coding agents enter enterprise management.</td>
+<td>2025-10-06</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://developers.openai.com/cookbook/articles/codex_exec_plans">Using PLANS.md for multi-hour problem solving</a></td>
+<td>OpenAI</td>
+<td>Codex; Long-running; Planning</td>
+<td>ExecPlan files and cross-context task management for multi-hour coding-agent work.</td>
+<td>2025-10-07</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://www.anthropic.com/engineering/beyond-permission-prompts">Beyond permission prompts: making Claude Code more secure and autonomous</a></td>
+<td>Anthropic</td>
+<td>Safety; Permissions; Claude Code</td>
+<td>From simple permission prompts to fine-grained security policies, reducing autonomous mode risk and interruptions.</td>
+<td>2025-10-20</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://openai.com/index/introducing-aardvark/">Introducing Aardvark: OpenAI's agentic security researcher</a></td>
+<td>OpenAI</td>
+<td>Agents; Security</td>
+<td>Security-domain agent form: continuous scanning, issue verification, fix suggestions; later integrated as Codex Security.</td>
+<td>2025-10-30</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://developers.openai.com/cookbook/topic/agents">Build a coding agent with GPT 5.1</a></td>
+<td>OpenAI</td>
+<td>Agents; Coding</td>
+<td>Build a coding agent from scratch: understand file editing, command execution, loops, and verification.</td>
+<td>2025-11-13</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://openai.com/index/agentic-ai-foundation/">OpenAI co-founds Agentic AI Foundation</a></td>
+<td>OpenAI</td>
+<td>MCP; Standards; AGENTS.md</td>
+<td>MCP, AGENTS.md, and agent standards enter the Linux Foundation/AAIF context; understand ecosystem standardization.</td>
+<td>2025-12-09</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation">Donating MCP and establishing the Agentic AI Foundation</a></td>
+<td>Anthropic</td>
+<td>MCP; Standards; AAIF</td>
+<td>Anthropic donates MCP to Linux Foundation/AAIF; read alongside OpenAI's AAIF article.</td>
+<td>2025-12-09</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://developers.openai.com/cookbook/topic/agents">Context Engineering for Personalization - Long-Term Memory Notes</a></td>
+<td>OpenAI</td>
+<td>Context; Long-term memory; Agents</td>
+<td>How long-term memory serves as agent personalization/state management.</td>
+<td>2026-01-05</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://developers.openai.com/blog/skyscanner-codex-jetbrains-mcp">Supercharging Codex with JetBrains MCP at Skyscanner</a></td>
+<td>OpenAI</td>
+<td>MCP; Codex; IDE</td>
+<td>Real IDE/MCP case study: how Codex CLI accesses IDE context and dev tools via JetBrains MCP.</td>
+<td>2026-01-11</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://www.anthropic.com/engineering/AI-resistant-technical-evaluations">Designing AI-resistant technical evaluations</a></td>
+<td>Anthropic</td>
+<td>Evals; Technical hiring</td>
+<td>How strong agents continuously break technical evaluations; relevant to benchmark contamination prevention and eval design.</td>
+<td>2026-01-21</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://www.langchain.com/blog/agent-evaluation-readiness-checklist">Agent Evaluation Readiness Checklist</a></td>
+<td>LangChain</td>
+<td>Evals; Agents; Checklist</td>
+<td>Practical checklist for selecting eval levels, constructing datasets, designing graders, and connecting offline and online evals.</td>
+<td>2026</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://openai.com/index/inside-our-in-house-data-agent/">Inside OpenAI's in-house data agent</a></td>
+<td>OpenAI</td>
+<td>Agents; Data; Memory</td>
+<td>Internal data agent case study: memory, Codex, data context, reliability; learn enterprise knowledge/data agents.</td>
+<td>2026-01-29</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://openai.com/index/introducing-the-codex-app/">Introducing the Codex app</a></td>
+<td>OpenAI</td>
+<td>Agents; Coding; Multi-agent</td>
+<td>Desktop command center for agents: multi-threaded/parallel long tasks, project-level agent workflows.</td>
+<td>2026-02-02</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://www.anthropic.com/news/apple-xcode-claude-agent-sdk">Apple's Xcode now supports Claude Agent SDK</a></td>
+<td>Anthropic</td>
+<td>Claude Agent SDK; Xcode; MCP</td>
+<td>Embed Claude Agent SDK in Xcode: harness, subagents, background tasks, plugins, MCP.</td>
+<td>2026-02-03</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://www.anthropic.com/engineering/infrastructure-noise">Quantifying infrastructure noise in agentic coding evals</a></td>
+<td>Anthropic</td>
+<td>Evals; Coding agents; Infrastructure</td>
+<td>Environment configuration significantly impacts scores in agentic coding evals; control infrastructure noise in both production and benchmarks.</td>
+<td>2026-02-05</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://www.anthropic.com/engineering/building-c-compiler">Building a C compiler with a team of parallel Claudes</a></td>
+<td>Anthropic</td>
+<td>Multi-agent; Coding; Long-running</td>
+<td>Parallel Claude teams completing large engineering tasks; learn multi-agent division of labor, coordination, and long-running execution.</td>
+<td>2026-02-05</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://openai.com/index/codex-security-now-in-research-preview/">Codex Security: now in research preview</a></td>
+<td>OpenAI</td>
+<td>Agents; Security; Codex</td>
+<td>Productization of an agentic security researcher: vulnerability discovery, verification, fix suggestions, reducing triage noise.</td>
+<td>2026-03-06</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://www.anthropic.com/engineering">Eval awareness in Claude Opus 4.6's BrowseComp performance</a></td>
+<td>Anthropic</td>
+<td>Evals; Agent awareness</td>
+<td>Risk of models recognizing/adapting to evaluations; relevant to agent benchmark credibility discussions.</td>
+<td>2026-03-06</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://www.anthropic.com/engineering/claude-code-auto-mode">How we built Claude Code auto mode: a safer way to skip permissions</a></td>
+<td>Anthropic</td>
+<td>Safety; Permissions; Autonomy</td>
+<td>Claude Code auto mode risk classification, allow/block rules, exception handling, and security testing.</td>
+<td>2026-03-25</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://www.langchain.com/blog/how-we-build-evals-for-deep-agents">How we build evals for Deep Agents</a></td>
+<td>LangChain</td>
+<td>Evals; Deep agents; Traces</td>
+<td>Targeted eval design for deep agents: select production behaviors, tag evals, inspect traces, and avoid false confidence from broad but shallow suites.</td>
+<td>2026-03-26</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://futuresearch.ai/deep-research-bench/">Deep Research Bench</a></td>
+<td>FutureSearch</td>
+<td>Evals; Deep research; Benchmark</td>
+<td>Benchmark for web research agents using offline web snapshots and carefully curated answers to make results more stable and objective.</td>
+<td>2025-06-25</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://arize.com/blog/how-to-evaluate-tool-calling-agents/">How to Evaluate Tool-Calling Agents</a></td>
+<td>Arize</td>
+<td>Evals; Tool calling; Trajectories</td>
+<td>Evaluation workflow for tool selection, tool arguments, trajectories, and LLM-as-judge scoring of tool-using agents.</td>
+<td>2026</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://arxiv.org/html/2601.05111v1">A Survey on Agent-as-a-Judge</a></td>
+<td>Academic</td>
+<td>Evals; Agent-as-a-judge; Survey</td>
+<td>Survey of agent-based evaluation methods that extend LLM-as-judge with multi-step reasoning, tools, and external observation.</td>
+<td>2026</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://developers.openai.com/cookbook/topic/agents">Migrate a Legacy Codebase with Sandbox Agents</a></td>
+<td>OpenAI</td>
+<td>Agents; Sandbox; Evals</td>
+<td>Sandbox agent evaluation and execution patterns in large legacy code migrations.</td>
+<td>2026-04-07</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://openai.com/index/codex-for-almost-everything/">Codex for (almost) everything</a></td>
+<td>OpenAI</td>
+<td>Agents; Codex; MCP; Plugins</td>
+<td>Codex app expanded to Windows/macOS, computer use, in-app browser, memory, plugins, MCP servers.</td>
+<td>2026-04-16</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://developers.openai.com/cookbook/examples/agents_sdk/computer_use_with_daytona/computer_use_with_daytona">Computer Use Agents in Daytona Sandboxes</a></td>
+<td>OpenAI</td>
+<td>Computer use; Sandbox; Agents</td>
+<td>Computer-use agents and sandbox runtimes; compare with Operator/CUA/Claude computer use.</td>
+<td>2026-04-19</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://openai.com/index/introducing-workspace-agents-in-chatgpt/">Introducing workspace agents in ChatGPT</a></td>
+<td>OpenAI</td>
+<td>Agents; Workspace; Governance</td>
+<td>Workspace agents: shared agents, permissions, tools, memory, safeguards; ideal for team collaboration agent design.</td>
+<td>2026-04-22</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://developers.openai.com/cookbook/topic/agents">Building workspace agents in ChatGPT to complete repeatable, end-to-end work</a></td>
+<td>OpenAI</td>
+<td>Workspace agents; ChatGPT</td>
+<td>Practical workspace agents for repeatable end-to-end team workflows.</td>
+<td>2026-04-22</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://openai.com/index/speeding-up-agentic-workflows-with-websockets/">Speeding up agentic workflows with WebSockets in the Responses API</a></td>
+<td>OpenAI</td>
+<td>Agents; Latency; Responses API</td>
+<td>Optimize latency by treating agentic rollouts as long-lived connections/tasks; learn production agent transport and caching.</td>
+<td>2026-05-01</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://www.anthropic.com/news/finance-agents">Agents for financial services</a></td>
+<td>Anthropic</td>
+<td>Agents; Finance; MCP</td>
+<td>Ten ready-to-run agent templates, Claude Code/Cowork plugins, Managed Agents cookbooks, MCP app.</td>
+<td>2026-05-05</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://developers.openai.com/cookbook/examples/agents_sdk/migrate-from-claude-agent-sdk/readme">Migrate from the Claude Agent SDK to the OpenAI Agents SDK</a></td>
+<td>OpenAI</td>
+<td>Agents SDK; Migration</td>
+<td>Compare Claude Agent SDK and OpenAI Agents SDK from a migration perspective; ideal for dual-stack learning.</td>
+<td>2026-05-07</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://arize.com/blog/why-testing-ai-agents-is-non-negotiable/">AI agent evaluation: How to test, debug, and improve agents in production</a></td>
+<td>Arize</td>
+<td>Evals; Production; Observability</td>
+<td>Production-oriented agent eval guide covering planning, memory, traces, debugging, and improvement loops.</td>
+<td>2026</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://developers.googleblog.com/build-long-running-ai-agents-that-pause-resume-and-never-lose-context-with-adk/">Build long-running AI agents that pause, resume, and never lose context with ADK</a></td>
+<td>Google</td>
+<td>Harness; Long-running agents; ADK</td>
+<td>Practical ADK tutorial for durable state machines, persistent sessions, event-driven resume, multi-agent delegation, and evals.</td>
+<td>2026-05-12</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://openai.com/index/building-codex-windows-sandbox/">Building a safe, effective sandbox to enable Codex on Windows</a></td>
+<td>OpenAI</td>
+<td>Safety; Sandbox; Codex</td>
+<td>Coding agent sandbox design on Windows: file access, network restrictions, approval tradeoffs.</td>
+<td>2026-05-13</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://openai.com/index/building-self-improving-tax-agents-with-codex/">Building self-improving tax agents with Codex</a></td>
+<td>OpenAI</td>
+<td>Agents; Evals; Self-improvement</td>
+<td>Combine production traces, expert feedback, Codex loop, and eval infrastructure into self-improving business agents.</td>
+<td>2026-05-27</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://claude.com/blog/a-harness-for-every-task-dynamic-workflows-in-claude-code">A harness for every task: dynamic workflows in Claude Code</a></td>
+<td>Anthropic</td>
+<td>Harness; Workflows; Claude Code</td>
+<td>Design article for Claude Code dynamic workflows: task-specific harnesses, fan-out-and-synthesize, adversarial verification, tournaments, and loop-until-done patterns.</td>
+<td>2026-06-02</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://developers.openai.com/cookbook/topic/agents">SchemaFlow: Agentic Database Change Impact Analysis, SQL Generation, and Eval Guardrails</a></td>
+<td>OpenAI</td>
+<td>Evals; SQL; Agent guardrails</td>
+<td>Guardrails and eval guardrails examples for data/SQL agents.</td>
+<td>2026-06-05</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://developers.openai.com/api/docs/guides/agents/quickstart">Agents SDK quickstart</a></td>
+<td>OpenAI</td>
+<td>Agents; SDK</td>
+<td>Quickly build a minimal agent; understand the code patterns of run, tool, and handoff.</td>
+<td>Current docs</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://openai.github.io/openai-agents-python/examples/">OpenAI Agents SDK examples</a></td>
+<td>OpenAI</td>
+<td>Agents SDK; Patterns; Examples</td>
+<td>Practical examples for agent patterns, MCP, memory, guardrails, approvals, handoffs, and streaming.</td>
+<td>Current docs</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://developers.openai.com/apps-sdk/mcp-apps-in-chatgpt">MCP Apps compatibility in ChatGPT</a></td>
+<td>OpenAI</td>
+<td>MCP; Apps SDK; UI</td>
+<td>Understand MCP Apps UI standards, iframe/bridge, and compatibility between ChatGPT and other hosts.</td>
+<td>Current docs</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://developers.openai.com/codex/guides/agents-sdk">Use Codex with the Agents SDK</a></td>
+<td>OpenAI</td>
+<td>MCP; Codex; Agents SDK</td>
+<td>Use Codex as an MCP server for other agents to call; ideal for multi-agent dev workflows.</td>
+<td>Current docs</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://developers.openai.com/codex/agent-approvals-security">Agent approvals and security - Codex</a></td>
+<td>OpenAI</td>
+<td>Safety; Approvals; Codex</td>
+<td>Official reference for Codex approval modes, sandbox, network access; read alongside OpenAI/Anthropic safety articles.</td>
+<td>Current docs</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://developers.openai.com/codex/skills">Agent Skills - Codex</a></td>
+<td>OpenAI</td>
+<td>Codex; Skills; Plugins</td>
+<td>Skills/Plugins as reusable workflow packages; compare with Anthropic Agent Skills.</td>
+<td>Current docs</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://developers.openai.com/cookbook/examples/skills_in_api">Skills in OpenAI API</a></td>
+<td>OpenAI</td>
+<td>Skills; OpenAI API</td>
+<td>Cookbook example for using Skills in the OpenAI API and connecting skill bundles to agent workflows.</td>
+<td>Current docs</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://developers.openai.com/codex/guides/agents-md">Custom instructions with AGENTS.md - Codex</a></td>
+<td>OpenAI</td>
+<td>AGENTS.md; Context</td>
+<td>How AGENTS.md provides persistent project specifications for agents; establish repo-level agent contracts.</td>
+<td>Current docs</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://developers.openai.com/api/docs/guides/agents/integrations-observability">Agents SDK integrations and observability</a></td>
+<td>OpenAI</td>
+<td>Observability; MCP; Tracing</td>
+<td>Tracing, MCP integration, provider/observability; essential for production agent debugging.</td>
+<td>Current docs</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://developers.openai.com/api/docs/guides/secure-mcp-tunnels">Secure MCP Tunnel</a></td>
+<td>OpenAI</td>
+<td>MCP; Security; Private tools</td>
+<td>Securely expose private/intranet MCP servers to supported OpenAI surfaces; ideal for enterprise deployment.</td>
+<td>Current docs</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://code.claude.com/docs/en/how-claude-code-works">How Claude Code works</a></td>
+<td>Anthropic</td>
+<td>Claude Code; Agentic loop; Harness</td>
+<td>Under-the-hood architecture of Claude Code: the agentic loop (gather context → act → verify), built-in tool categories, context window management, and extension points.</td>
+<td>Current docs</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://blog.ravi-mehta.com/p/specs-are-the-new-source-code">The spec is dead, long live the spec!</a></td>
+<td>Ravi on Product</td>
+<td>Specs; Product; Agentic development</td>
+<td>Argues that specs and prompts become durable source material when AI can generate implementation rapidly.</td>
+<td>2025-07-31</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://developers.cloudflare.com/agents/model-context-protocol/guides/remote-mcp-server/#add-authentication">Build a Remote MCP server</a></td>
+<td>Cloudflare</td>
+<td>MCP; Remote servers; Authentication</td>
+<td>Practical guide to deploying remote MCP servers with Streamable HTTP, OAuth, session state, and authorization boundaries.</td>
+<td>Current docs</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://blog.modelcontextprotocol.io/posts/2025-09-08-mcp-registry-preview/">Introducing the MCP Registry</a></td>
+<td>MCP</td>
+<td>MCP; Registry; Discovery</td>
+<td>Official preview of the MCP Registry as a source of truth for discovering and distributing public MCP servers.</td>
+<td>2025-09-08</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://www-cdn.anthropic.com/58284b19e702b49db9302d5b6f135ad8871e7658.pdf">How Anthropic teams use Claude Code</a></td>
+<td>Anthropic</td>
+<td>Claude Code; Team workflows; Case studies</td>
+<td>Internal Anthropic examples across data infrastructure, product, security, inference, design, legal, and RL engineering.</td>
+<td>Current PDF</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://www.splunk.com/en_us/blog/learn/sast-vs-dast.html">SAST vs. DAST vs. RASP</a></td>
+<td>Splunk</td>
+<td>Security; AppSec; Testing</td>
+<td>Clear comparison of static, dynamic, and runtime application security testing methods for agent safety baselines.</td>
+<td>Current article</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://embracethered.com/blog/posts/2025/github-copilot-remote-code-execution-via-prompt-injection/">GitHub Copilot: Remote Code Execution via Prompt Injection</a></td>
+<td>Embrace The Red</td>
+<td>Security; Prompt injection; Coding agents</td>
+<td>Concrete RCE case study showing how agent-controlled configuration changes can collapse permission boundaries.</td>
+<td>2025-08-12</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://semgrep.dev/blog/2025/finding-vulnerabilities-in-modern-web-apps-using-claude-code-and-openai-codex/">Finding vulnerabilities in modern web apps using Claude Code and OpenAI Codex</a></td>
+<td>Semgrep</td>
+<td>Security; Coding agents; Vulnerability research</td>
+<td>Empirical study of Claude Code and Codex on vulnerability discovery, including true positives, false positives, and failure modes.</td>
+<td>2025-09-02</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://unit42.paloaltonetworks.com/agentic-ai-threats/">AI Agents Are Here. So Are the Threats.</a></td>
+<td>Unit 42</td>
+<td>Security; Agent threats; Prompt injection</td>
+<td>Threat scenarios for multi-agent systems: instruction extraction, tool misuse, internal access, impersonation, and RCE.</td>
+<td>Current article</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://owasp.org/www-project-top-ten/">OWASP Top Ten</a></td>
+<td>OWASP</td>
+<td>Security; Web applications; AppSec</td>
+<td>Foundational web application risk taxonomy; useful baseline when asking agents to build or review web apps.</td>
+<td>Current project</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://github.blog/developer-skills/github/how-to-review-code-effectively-a-github-staff-engineers-philosophy/">How to review code effectively</a></td>
+<td>GitHub</td>
+<td>Code review; Engineering practice</td>
+<td>Staff-engineer philosophy for effective code review: reviewer intent, clarity, scope, and human communication.</td>
+<td>Current article</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://arxiv.org/pdf/2405.13565">AI-Assisted Assessment of Coding Practices in Modern Code Review</a></td>
+<td>Academic</td>
+<td>Code review; AI review; Google</td>
+<td>AutoCommenter paper: architecture, deployment, and evaluation of an LLM-assisted code-review system at Google scale.</td>
+<td>2024-05-22</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://graphite.dev/guides/ai-code-review-implementation-best-practices">AI code review implementation and best practices</a></td>
+<td>Graphite</td>
+<td>Code review; AI review; Workflow</td>
+<td>Implementation checklist for introducing AI code review into repository hooks, policies, team rules, and review workflows.</td>
+<td>Current article</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://www.evidentlyai.com/ml-system-design">ML and LLM system design: 800 case studies to learn from</a></td>
+<td>Evidently AI</td>
+<td>ML systems; LLM systems; Case studies</td>
+<td>Database of production ML and LLM case studies from 150+ companies, including GenAI, RAG, AI agents, evaluation, and deployment architecture examples.</td>
+<td>2025-12-22</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://sre.google/sre-book/introduction/">Introduction to Site Reliability Engineering</a></td>
+<td>Google</td>
+<td>SRE; Production; Reliability</td>
+<td>Foundational SRE framing: software engineering applied to operations, toil reduction, risk, and reliable production systems.</td>
+<td>Current book</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://last9.io/blog/traces-spans-observability-basics/">Traces &amp; Spans: Observability Basics You Should Know</a></td>
+<td>Last9</td>
+<td>Observability; Tracing; Production</td>
+<td>Practical primer on traces and spans for debugging distributed systems and giving agents useful production evidence.</td>
+<td>2025-04-23</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://resolve.ai/blog/kubernetes-troubleshooting-in-resolve-ai">Kubernetes Troubleshooting in Resolve AI</a></td>
+<td>Resolve AI</td>
+<td>SRE agents; Kubernetes; Troubleshooting</td>
+<td>Production-agent case study for Kubernetes root-cause analysis across pods, deployments, logs, metrics, and infrastructure signals.</td>
+<td>2026-05-21</td>
+</tr>
+<tr>
+<td>P1</td>
+<td><a href="https://resolve.ai/blog/role-of-multi-agent-systems-AI-native-engineering">The role of multi agent systems in making software engineers AI-native</a></td>
+<td>Resolve AI</td>
+<td>Multi-agent; SRE; AI-native engineering</td>
+<td>Argues that production engineering needs specialized multi-agent systems for parallel investigation and domain-aware coordination.</td>
+<td>2026-03-20</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://github.com/shareAI-lab/learn-claude-code">learn-claude-code</a></td>
+<td>Community</td>
+<td>Harness; Agent loop; Tools; Context</td>
+<td>Hands-on 20-lesson tutorial building a Claude Code–like agent harness from scratch: agent loop, tool integration, context compaction, multi-agent coordination, permissions, MCP plugins.</td>
+<td>2026</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://arxiv.org/abs/2604.14228">Dive into Claude Code: The Design Space of Today's and Future AI Agent Systems</a></td>
+<td>Academic</td>
+<td>Agent architecture; Claude Code; Design space</td>
+<td>Deep technical analysis of Claude Code's architecture: agentic loop, permission system, context compaction, extensibility (MCP/plugins/skills/hooks), subagent delegation, and comparison with open-source alternatives.</td>
+<td>2026-04-14</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://developers.openai.com/api/docs/guides/function-calling">Function Calling</a></td>
+<td>OpenAI</td>
+<td>Tools; Function calling; API</td>
+<td>Official guide to function/tool calling: define functions with JSON schemas, handle model tool calls, execute and return results.</td>
+<td>Current docs</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://platform.claude.com/docs/en/agents-and-tools/tool-use/overview">Tool use overview</a></td>
+<td>Anthropic</td>
+<td>Tools; Tool use; API</td>
+<td>Connect Claude to external tools and APIs: client vs server tools, the agentic loop, strict schema conformance, and when Claude decides to call tools.</td>
+<td>Current docs</td>
+</tr>
+<tr>
+<td>P0</td>
+<td><a href="https://ai.google.dev/gemini-api/docs/function-calling">Function calling - Gemini API</a></td>
+<td>Google</td>
+<td>Tools; Function calling; API</td>
+<td>Enable Gemini models to connect with external tools via function calling: single-turn, multi-turn, parallel, and sequential function chains.</td>
+<td>Current docs</td>
+</tr>
+<tr>
+<td>P2</td>
+<td><a href="https://github.com/SeanHeelan/o3_finds_cve-2025-37899/blob/master/system_prompt_uafs.prompt">Vulnerability Prompt Analysis with O3</a></td>
+<td>Community</td>
+<td>Security; Prompting; Vulnerability research</td>
+<td>Concrete vulnerability-analysis prompt used with o3; useful as a prompt artifact to study, not a general framework.</td>
+<td>2025</td>
+</tr>
+<tr>
+<td>P2</td>
+<td><a href="https://blog.codinghorror.com/code-reviews-just-do-it/">Code Reviews: Just Do It</a></td>
+<td>Coding Horror</td>
+<td>Code review; Engineering practice</td>
+<td>Classic argument for peer review as one of the highest-leverage software quality practices.</td>
+<td>2006-01-21</td>
+</tr>
+<tr>
+<td>P2</td>
+<td><a href="https://blakesmith.me/2015/02/09/code-review-essentials-for-software-teams.html">Code Review Essentials for Software Teams</a></td>
+<td>Blake Smith</td>
+<td>Code review; Team practice</td>
+<td>Practical code review hierarchy: shared mental models, design clarity, pull request quality, and constructive feedback.</td>
+<td>2015-02-09</td>
+</tr>
+<tr>
+<td>P2</td>
+<td><a href="https://www.youtube.com/watch?v=TswQeKftnaw">Lessons from millions of AI code reviews</a></td>
+<td>Greptile</td>
+<td>AI code review; Lessons</td>
+<td>Talk on patterns from large-scale AI code review usage; useful qualitative context for review-agent design.</td>
+<td>Video</td>
+</tr>
+<tr>
+<td>P2</td>
+<td><a href="https://github.com/mihail911/modern-software-dev-assignments/tree/master/week8">Multi-stack Web App Builds</a></td>
+<td>Community</td>
+<td>Assignments; Full-stack; Practice</td>
+<td>Practice assignment for multi-stack web app builds; useful as an applied testbed for coding agents.</td>
+<td>Current repo</td>
+</tr>
+<tr>
+<td>P2</td>
+<td><a href="https://resolve.ai/blog/product-deep-dive">AI Production Engineer</a></td>
+<td>Resolve AI</td>
+<td>SRE agents; Product case study</td>
+<td>Product deep dive on autonomous production engineering agents for alerts, RCA, remediation, and post-incident review.</td>
+<td>2026-03-28</td>
+</tr>
+<tr>
+<td>P2</td>
+<td><a href="https://resolve.ai/blog/Top-5-Benefits">The Top 5 Benefits of Agentic AI in On-call Engineering</a></td>
+<td>Resolve AI</td>
+<td>SRE agents; On-call; Operations</td>
+<td>Overview of agentic AI benefits for incident response, dynamic knowledge, and on-call operations.</td>
+<td>2025-07-25</td>
+</tr>
+<tr>
+<td>P2</td>
+<td><a href="https://developers.openai.com/cookbook/examples/orchestrating_agents">Orchestrating Agents: Routines and Handoffs (archived)</a></td>
+<td>OpenAI</td>
+<td>Agents; Handoffs; Orchestration</td>
+<td>Historical cookbook for routines and handoffs; useful conceptually, but archived and not the current recommended implementation path.</td>
+<td>2024-10-10</td>
+</tr>
+<tr>
+<td>P2</td>
+<td><a href="https://www.anthropic.com/news/contextual-retrieval">Introducing Contextual Retrieval</a></td>
+<td>Anthropic</td>
+<td>Context; Retrieval; RAG</td>
+<td>Not agent-specific, but important for agent RAG/context: prepend context to chunks before retrieval to improve recall.</td>
+<td>2024-09-19</td>
+</tr>
+<tr>
+<td>P2</td>
+<td><a href="https://www.anthropic.com/news/developing-computer-use">Developing a computer use model</a></td>
+<td>Anthropic</td>
+<td>Computer use; Agents</td>
+<td>More technical explanation of how the computer-use model moves the mouse, clicks, types, and reads screen feedback.</td>
+<td>2024-10-22</td>
+</tr>
+<tr>
+<td>P2</td>
+<td><a href="https://www.anthropic.com/news/claude-4">Introducing Claude 4</a></td>
+<td>Anthropic</td>
+<td>Agents; Coding; Long-running</td>
+<td>Overview of Claude Opus/Sonnet 4 capabilities: coding, advanced reasoning, agent workflows.</td>
+<td>2025-05-22</td>
+</tr>
+<tr>
+<td>P2</td>
+<td><a href="https://www.anthropic.com/news/claude-for-financial-services">Claude for Financial Services</a></td>
+<td>Anthropic</td>
+<td>Agents; Connectors; Finance</td>
+<td>Vertical industry agent/connector productization case; understand data, permissions, and tool integration in finance.</td>
+<td>2025-07-15</td>
+</tr>
+<tr>
+<td>P2</td>
+<td><a href="https://www.anthropic.com/news/advancing-claude-for-financial-services">Advancing Claude for Financial Services</a></td>
+<td>Anthropic</td>
+<td>Agents; Skills; Finance</td>
+<td>Claude for Excel, real-time data connectors, pre-built Agent Skills for vertical industry productization.</td>
+<td>2025-10-27</td>
+</tr>
+<tr>
+<td>P2</td>
+<td><a href="https://openai.com/index/introducing-gpt-5-3-codex/">Introducing GPT-5.3-Codex</a></td>
+<td>OpenAI</td>
+<td>Agents; Coding model; Evals</td>
+<td>Codex-native model and long-running coding/terminal/agentic benchmarks; understand how model capabilities serve the harness.</td>
+<td>2026-02-05</td>
+</tr>
+<tr>
+<td>P2</td>
+<td><a href="https://openai.com/index/introducing-openai-frontier/">Introducing OpenAI Frontier</a></td>
+<td>OpenAI</td>
+<td>Agents; Enterprise; Governance</td>
+<td>Enterprise AI coworker/agent platform: shared context, onboarding, permissions, guardrails, governance.</td>
+<td>2026-02-10</td>
+</tr>
+<tr>
+<td>P2</td>
+<td><a href="https://www.anthropic.com/news/claude-sonnet-4-6">Introducing Claude Sonnet 4.6</a></td>
+<td>Anthropic</td>
+<td>Agents; Planning; Computer use</td>
+<td>Sonnet 4.6 emphasizes coding, computer use, long-context reasoning, agent planning.</td>
+<td>2026-02-17</td>
+</tr>
+<tr>
+<td>P2</td>
+<td><a href="https://www.anthropic.com/news/claude-opus-4-6">Introducing Claude Opus 4.6</a></td>
+<td>Anthropic</td>
+<td>Agents; Long-running; Tool use</td>
+<td>Model release perspective on long-running tasks, agentic harness, subagents, and tool call capabilities.</td>
+<td>2026-02-25</td>
+</tr>
+<tr>
+<td>P2</td>
+<td><a href="https://www.anthropic.com/news/claude-opus-4-7">Introducing Claude Opus 4.7</a></td>
+<td>Anthropic</td>
+<td>Agents; Long-running; Coding</td>
+<td>Stronger software engineering and long-running task performance; track how model capabilities impact agent workloads.</td>
+<td>2026-04-16</td>
+</tr>
+<tr>
+<td>P2</td>
+<td><a href="https://www.anthropic.com/engineering/april-23-postmortem">An update on recent Claude Code quality reports</a></td>
+<td>Anthropic</td>
+<td>Reliability; Claude Code; Agent SDK</td>
+<td>Postmortem on Claude Code/Agent SDK quality regression; learn agent product operations and regression control.</td>
+<td>2026-04-23</td>
+</tr>
+<tr>
+<td>P2</td>
+<td><a href="https://www.anthropic.com/news/claude-opus-4-8">Introducing Claude Opus 4.8</a></td>
+<td>Anthropic</td>
+<td>Agents; Dynamic workflows; Long-running</td>
+<td>Dynamic workflows, hundreds of parallel subagents, long-running agentic tasks — latest model/product direction.</td>
+<td>2026-05-28</td>
+</tr>
+<tr>
+<td>P2</td>
+<td><a href="https://openai.com/index/codex-for-every-role-tool-workflow/">Codex for every role, tool, and workflow</a></td>
+<td>OpenAI</td>
+<td>Agents; Codex; Plugins</td>
+<td>Codex expands from development to knowledge work: role-specific plugins, Sites, annotations, parallel workflows.</td>
+<td>2026-06-02</td>
+</tr>
+<tr>
+<td>P2</td>
+<td><a href="https://openai.com/index/codex-for-knowledge-work/">Codex is becoming a productivity tool for everyone</a></td>
+<td>OpenAI</td>
+<td>Agents; Knowledge work</td>
+<td>Usage data shows how non-developers use Codex for reports, spreadsheets, research, automation, and lightweight tools.</td>
+<td>2026-06-02</td>
+</tr>
+<tr>
+<td>P2</td>
+<td><a href="https://developers.openai.com/learn/docs-mcp">OpenAI Docs MCP</a></td>
+<td>OpenAI</td>
+<td>MCP; Docs; Context</td>
+<td>Official OpenAI docs MCP server; connect docs directly to local agents/IDEs.</td>
+<td>Current docs</td>
+</tr>
+<tr>
+<td>P2</td>
+<td><a href="https://developers.openai.com/codex/sdk">Codex SDK</a></td>
+<td>OpenAI</td>
+<td>Codex SDK; Automation</td>
+<td>Programmatically control Codex in CI/CD or internal tools; embed coding agents into existing workflows.</td>
+<td>Current docs</td>
+</tr>
+<tr>
+<td>P2</td>
+<td><a href="https://www.anthropic.com/institute/recursive-self-improvement">When AI builds itself</a></td>
+<td>Anthropic</td>
+<td>Agents; Recursive self-improvement; Safety</td>
+<td>How AI systems accelerate their own development through recursive self-improvement; three possible futures and the need for verifiable coordination.</td>
+<td>2026-05</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="who-is-this-for">Who Is This For?<a class="headerlink" href="#who-is-this-for" title="Permanent link">&para;</a></h2>
+<ul>
+<li>AI Engineers</li>
+<li>Agent Engineers</li>
+<li>LLM Engineers</li>
+<li>Platform Engineers</li>
+<li>Research Engineers</li>
+<li>AI Startup Founders</li>
+</ul>
+<hr />
+<h2 id="contributing">Contributing<a class="headerlink" href="#contributing" title="Permanent link">&para;</a></h2>
+<p>Contributions are welcome. If you find:</p>
+<ul>
+<li>New OpenAI resources</li>
+<li>New Anthropic resources</li>
+<li>MCP updates</li>
+<li>Agent evaluation frameworks</li>
+<li>Production engineering articles</li>
+</ul>
+<p>Please open a pull request.</p>
+<hr />
+<h2 id="vision">Vision<a class="headerlink" href="#vision" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>The goal of this project is to become the <strong>System Design Primer</strong> for Agentic Engineering.</p>
+</blockquote>
+<p>If you're serious about building production AI agents, start here.</p>
+<hr />
+<h2 id="star-history">Star History<a class="headerlink" href="#star-history" title="Permanent link">&para;</a></h2>
+<p><a href="https://star-history.com/#keyuchen21/agentic-engineering-handbook&amp;Date"><img alt="Star History Chart" src="https://api.star-history.com/svg?repos=keyuchen21/agentic-engineering-handbook&amp;type=Date" /></a></p>
+<hr />
+<h2 id="license">License<a class="headerlink" href="#license" title="Permanent link">&para;</a></h2>
+<p><a href="https://github.com/keyuchen21/agentic-engineering-handbook/blob/main/LICENSE">MIT</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  맨위로
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.path", "search.suggest", "search.highlight", "content.code.copy"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="js/print-site.js"></script>
+      
+    
+  </body>
+</html>
